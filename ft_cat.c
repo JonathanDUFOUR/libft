@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_cat.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/15 12:09:25 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 18:32:16 by jojo             ###   ########.fr       */
+/*   Created: 2020/03/03 04:28:36 by jojo              #+#    #+#             */
+/*   Updated: 2020/03/03 05:57:45 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
-{
-	int	res;
-	int	sign;
-	int	i;
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 
-	res = 0;
-	sign = 1;
-	while ((str[i] >= 8 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+void	ft_cat(int argc, char **argv)
+{
+	int i;
+	int fd;
+	char output;
+
+	i = 0;
+	output = 0;
+	while (++i < argc)
 	{
-		sign = (str[i] == '-' ? -1 : 1);
-		i++;
+		fd = open(argv[i], O_RDONLY);
+		if(fd >= 0)
+			while (read(fd, &output, 1) != 0)
+				write(1, &output, 1);
+		close(fd);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - 48;
-		i++;
-	}
-	return (res * sign);
+	return ;
 }
