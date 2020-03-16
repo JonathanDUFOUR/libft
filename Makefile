@@ -6,40 +6,61 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/15 20:57:34 by jojo             ###   ########.fr        #
+#    Updated: 2020/03/16 19:10:13 by jonathan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIB_NAME	=	mylib.a
+NAME		=	libft.a
 
-HEADER_NAME	=	mylib.h
+SRCS		=	ft_atoi_base.c		\
+				ft_file_size.c		\
+				ft_isspace.c		\
+				ft_putchar.c		\
+				ft_sqrt.c			\
+				ft_strlen.c			\
+				ft_atoi.c			\
+				ft_int_size.c		\
+				ft_itoa_base.c		\
+				ft_putnbr_base.c	\
+				ft_strcat.c			\
+				ft_strstr.c			\
+				ft_base_digit.c		\
+				ft_isdigit.c		\
+				ft_itoa.c			\
+				ft_putnbr.c			\
+				ft_strcpy.c			\
+				ft_wrong_base.c		\
+				ft_cat.c			\
+				ft_is_in_base.c		\
+				ft_power.c			\
+				ft_putstr.c			\
+				ft_strdup.c
 
-SRC			=	./*.c
+OBJECTS		=	${SRCS:.c=.o}
 
-OBJECTS		=	./*.o
+CFLAGS		=	-Wall -Wextra -Werror
 
 CC			=	gcc
 
-CFLAGS		=	-Wextra -Werror -Wall
-
 AR_RC		=	ar rcs
 
-RM			=	rm -f
+RM			=	rm -rf
 
 
-all: object
-	${AR_RC} ${LIB_NAME} ${OBJECTS}
+all:	${NAME}
 
-header:
-	touch ${HEADER_NAME} && ls ${SRC} > ${HEADER_NAME} && sed -i "s/\.\///g" ${HEADER_NAME} && sed -i "s/\.c/();/g" ${HEADER_NAME}
+%.o:	%.c
+	@${CC} -c ${CFLAGS} -o $@ $<
 
-object:
-	${CC} -c ${CFLAGS} ${SRC}
+${NAME}:	${OBJECTS}
+	@${AR_RC} $@ $^
 
 clean:
-	${RM} ${OBJECTS}
+	@${RM} ${OBJECTS}
 
 fclean: clean
-	${RM} ${LIB_NAME}
+	@${RM} ${NAME}
 
 re: fclean all
+
+.PHONY: all clean fclean re
