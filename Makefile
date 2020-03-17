@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/16 19:10:13 by jonathan         ###   ########.fr        #
+#    Updated: 2020/03/16 21:30:54 by jonathan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,14 @@ RM			=	rm -rf
 
 all:	${NAME}
 
+debug:	CFLAGS += -g
+debug:	${NAME}
+
 %.o:	%.c
-	@${CC} -c ${CFLAGS} -o $@ $<
+	${CC} -c ${CFLAGS} -o $@ $<
 
 ${NAME}:	${OBJECTS}
-	@${AR_RC} $@ $^
+	${AR_RC} $@ $^
 
 clean:
 	@${RM} ${OBJECTS}

@@ -6,7 +6,7 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 04:28:36 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/03 05:57:45 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/17 04:02:05 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_cat(int argc, char **argv)
 	{
 		fd = open(argv[i], O_RDONLY);
 		if(fd >= 0)
-			while (read(fd, &output, 1) != 0)
+			while (read(fd, &output, 1))
 				write(1, &output, 1);
 		close(fd);
 	}

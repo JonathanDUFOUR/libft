@@ -6,7 +6,7 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 14:27:19 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 14:39:56 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/16 23:16:48 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	ft_atoi_base(char *str, char *base)
 	res = 0;
 	sign = 1;
 	bs = ft_strlen(base);
+	i = 0;
 	while ((str[i] >= 8 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')

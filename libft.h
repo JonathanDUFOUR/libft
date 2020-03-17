@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/16 17:12:37 by jonathan         ###   ########.fr       */
+/*   Updated: 2020/03/17 04:03:56 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int			ft_atoi_base(char *str, char *base);
 int			ft_atoi(char *str);
 int			ft_base_digit(char c, char *base);
-void		ft_cat(char *file);
+void		ft_cat(int nb_files, char **files);
 long int	ft_file_size(char *file);
 int			ft_int_size(int nbr);
 int			ft_isdigit(char c);
