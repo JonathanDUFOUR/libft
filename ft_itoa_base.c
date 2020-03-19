@@ -6,18 +6,16 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 16:38:09 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 17:28:40 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/18 22:57:05 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STDLIB_H
-# define STDLIB_H
-# include <stdlib.h>
-#endif
+#include <string.h>
+#include <stdlib.h>
 
 int		ft_wrong_base(char *base);
 int		ft_power(int nbr, int pow);
-int		ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 
 char	*ft_itoa_base(int nbr, char *base)
 {
@@ -29,20 +27,21 @@ char	*ft_itoa_base(int nbr, char *base)
 	int				i;
 
 	if (ft_wrong_base(base))
-		return (NULL);
+		return (0);
 	sign = (nbr < 0 ? 1 : 0);
 	abs = (sign ? -nbr : nbr);
-	bs = ft_strlen(base);
 	len = 1;
-	while (ft_power(bs, len) <= nbr)
+	bs = ft_strlen(base);
+	while ((unsigned int)ft_power(bs, len) <= abs)
 		len++;
+	len += sign;
 	if (!(output = malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	i = (sign ? 1 : 0);
 	output[len] = 0;
 	while (--len >= i)
 	{
-		output[i] = base[abs % bs];
+		output[len] = base[abs % bs];
 		abs /= bs;
 	}
 	if (sign)

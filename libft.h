@@ -6,9 +6,11 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/17 04:03:56 by jonathan         ###   ########.fr       */
+/*   Updated: 2020/03/18 22:27:15 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -33,7 +35,7 @@ int			ft_sqrt(int nbr);
 char		*ft_strcat(char *dest, char *src);
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_strdup(char *str);
-int			ft_strlen(char *str);
+size_t		ft_strlen(const char *str);
 char		*ft_strstr(char *str, char *to_find);
 int			ft_wrong_base(char *base);
 

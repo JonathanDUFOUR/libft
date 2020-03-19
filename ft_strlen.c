@@ -6,11 +6,18 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 11:47:39 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 11:48:31 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/18 22:23:50 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <string.h>
+
+size_t  ft_strlen(register const char *str)
 {
-	return (*str ? 1 + ft_strlen(str + 1) : 0);
+	register char *p;
+
+	p = (char *)str;
+	while (*p)
+		++p;
+	return (p - str);
 }

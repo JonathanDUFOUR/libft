@@ -6,37 +6,29 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:40:47 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 13:18:02 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/19 01:17:22 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STDLIB_H
-# define STDLIB_H
-# include <stdlib.h>
-#endif
+#include <string.h>
+#include <stdlib.h>
 
 int		ft_int_size(int nbr);
 
 char	*ft_itoa(int nbr)
 {
-	unsigned int	abs;
-	int				sign;
 	char			*output;
 	int				len;
-	int				i;
 
-	abs = (nbr < 0 ? -nbr : nbr);
-	sign = (nbr < 0 ? 1 : 0);
-	len = (sign ? ft_int_size(abs) + 1 : ft_int_size(abs));
-	if (!(output = malloc(len * sizeof(int))))
+	len = ft_int_size(nbr);
+	if (!(output = malloc((len + 1))))
 		return (NULL);
-	i = (sign ? 1 : 0);
-	while (--len >= i)
+	output[len] = 0;
+	output[0] = (nbr < 0 ? '-' : '0');
+	while (len && nbr)
 	{
-		output[len] = abs % 10;
-		abs /= 10;
+		output[--len] = (-(nbr < 0) | 1) * (nbr % 10) + '0';
+		nbr /= 10;
 	}
-	if (sign)
-		output[0] = '-';
 	return (output);
 }

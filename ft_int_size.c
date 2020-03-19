@@ -6,23 +6,16 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:50:30 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 13:14:51 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/19 00:48:10 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_int_size(int nbr)
 {
-	unsigned int	abs;
-	int				sign;
 	int				size;
 
-	sign = (nbr < 0 ? 1 : 0);
-	abs = (sign ? -nbr : nbr);
-	size = (sign ? 2 : 1);
-	while (abs > 9)
-	{
+	size = 1 + (nbr < 0);
+	while (nbr /= 10)
 		size++;
-		abs /= 10;
-	}
 	return (size);
 }
