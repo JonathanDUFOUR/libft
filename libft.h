@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/20 02:03:25 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/20 04:31:38 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char		*ft_strcpy(char *dest, char *src);
 char		*ft_strdup(char *str);
 size_t		ft_strlen(const char *str);
 char		*ft_strstr(char *str, char *to_find);
+void		ft_swap(int *a, int *b);
 int			ft_wrong_base(char *base);
 
 #endif
