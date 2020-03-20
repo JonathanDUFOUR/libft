@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/15 12:22:28 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/19 22:19:54 by jojo             ###   ########.fr       */
+/*   Created: 2020/03/19 23:30:41 by jojo              #+#    #+#             */
+/*   Updated: 2020/03/19 23:34:17 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	int	i;
-	int	j;
+#include "libft.h"
 
-	i = -1;
-	if (!*to_find)
-		return (str);
-	while (str[++i])
-	{
-		j = 0;
-		while (str[i + j] && to_find[j] && to_find[j] == str[i + j])
-			j++;
-		if (!to_find[j])
-			return (str + i);
-	}
-	return (0);
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
+{
+	return (ft_itoa_base(ft_atoi_base(nbr, base_from), base_to));
 }

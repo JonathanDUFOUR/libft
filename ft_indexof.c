@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_in_base.c                                    :+:      :+:    :+:   */
+/*   ft_indexof.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/15 14:40:13 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 14:42:02 by jojo             ###   ########.fr       */
+/*   Created: 2020/03/15 14:42:32 by jojo              #+#    #+#             */
+/*   Updated: 2020/03/20 01:43:32 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_in_base(char c, char *base)
-{
-	int	i;
+#include <sys/types.h>
+#include "libft.h"
 
-	i = -1;
-	while (base[++i])
-		if (c == base[i])
-			return (1);
-	return (0);
+ssize_t	ft_indexof(char c, char *str)
+{
+	ssize_t	i;
+
+	i = 0;
+	while (str[i] && c != str[i])
+		i++;
+	return (str[i] == c ? i : -1);
 }
+

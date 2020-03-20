@@ -6,16 +6,13 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 16:38:09 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/18 22:57:05 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/20 00:47:44 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
-
-int		ft_wrong_base(char *base);
-int		ft_power(int nbr, int pow);
-size_t	ft_strlen(char *str);
+#include "libft.h"
 
 char	*ft_itoa_base(int nbr, char *base)
 {
