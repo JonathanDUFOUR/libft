@@ -6,13 +6,16 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 16:38:09 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/20 00:47:44 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/20 17:13:51 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include <sys/types.h>
 #include "libft.h"
+
+#ifndef NULL
+# define NULL 0
+#endif
 
 char	*ft_itoa_base(int nbr, char *base)
 {
@@ -32,7 +35,7 @@ char	*ft_itoa_base(int nbr, char *base)
 	while ((unsigned int)ft_power(bs, len) <= abs)
 		len++;
 	len += sign;
-	if (!(output = malloc((len + 1) * sizeof(char))))
+	if (!(output = (char *) ft_memalloc((len + 1) * sizeof(char))))
 		return (NULL);
 	i = (sign ? 1 : 0);
 	output[len] = 0;

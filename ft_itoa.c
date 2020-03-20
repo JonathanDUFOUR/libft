@@ -6,14 +6,16 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:40:47 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/19 01:17:22 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/20 17:14:21 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include <sys/types.h>
+#include "libft.h"
 
-int		ft_int_size(int nbr);
+#ifndef NULL
+# define NULL 0
+#endif
 
 char	*ft_itoa(int nbr)
 {
@@ -21,7 +23,7 @@ char	*ft_itoa(int nbr)
 	int				len;
 
 	len = ft_int_size(nbr);
-	if (!(output = malloc((len + 1))))
+	if (!(output = (char *) ft_memalloc((len + 1) * sizeof(char))))
 		return (NULL);
 	output[len] = 0;
 	output[0] = (nbr < 0 ? '-' : '0');

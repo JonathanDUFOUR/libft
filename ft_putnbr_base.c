@@ -6,14 +6,11 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:56:18 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 14:30:29 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/20 17:09:36 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UNISTD_H
-# define UNISTD_H
-# include <unistd.h>
-#endif
+#include <unistd.h>
 
 int		ft_strlen(char *str);
 int		ft_wrong_base(char *base);

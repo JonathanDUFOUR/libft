@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/20 04:22:09 by jojo             ###   ########.fr        #
+#    Updated: 2020/03/20 15:48:17 by jojo             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS		=	ft_atoi_base.c		\
 				ft_isspace.c		\
 				ft_itoa_base.c		\
 				ft_itoa.c			\
+				ft_memalloc.c		\
 				ft_power.c			\
 				ft_putchar.c		\
 				ft_putnbr_base.c	\

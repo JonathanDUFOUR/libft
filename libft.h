@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/20 04:31:38 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/20 15:49:02 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int			ft_isdigit(char c);
 int			ft_isspace(char c);
 char		*ft_itoa_base(int nbr, char *base);
 char		*ft_itoa(int nbr);
+void		*ft_memalloc(size_t size);
 int			ft_power(int nbr, int pow);
 void		ft_putchar(char c);
 void		ft_putnbr_base(int nbr, char *base);

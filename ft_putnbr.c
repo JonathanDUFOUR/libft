@@ -6,14 +6,11 @@
 /*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 11:48:49 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/15 18:46:09 by jojo             ###   ########.fr       */
+/*   Updated: 2020/03/20 17:09:49 by jojo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UNISTD_H
-# define UNISTD_H
-# include <unistd.h>
-#endif
+#include <unistd.h>
 
 void	ft_putnbr(int nbr)
 {
