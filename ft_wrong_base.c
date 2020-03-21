@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_wrong_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/15 14:29:56 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/18 22:30:49 by jojo             ###   ########.fr       */
+/*   Created: 2020/03/21 06:28:43 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/21 06:28:46 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str);
+#include "libft.h"
 
 int		ft_wrong_base(char *base)
 {

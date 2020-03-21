@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jojo <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/15 12:56:18 by jojo              #+#    #+#             */
-/*   Updated: 2020/03/20 17:09:36 by jojo             ###   ########.fr       */
+/*   Created: 2020/03/21 06:24:56 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/21 06:25:11 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-int		ft_strlen(char *str);
-int		ft_wrong_base(char *base);
+#include "libft.h"
 
 void	ft_putnbr_base(int nbr, char *base)
 {
