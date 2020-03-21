@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/20 15:48:17 by jojo             ###   ########.fr        #
+#    Updated: 2020/03/21 07:29:00 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME		=	libft.a
 
 SRCS		=	ft_atoi_base.c		\
 				ft_atoi.c			\
+				ft_bzero.c			\
 				ft_cat.c			\
 				ft_convert_base.c	\
 				ft_file_size.c		\
@@ -24,6 +25,10 @@ SRCS		=	ft_atoi_base.c		\
 				ft_itoa_base.c		\
 				ft_itoa.c			\
 				ft_memalloc.c		\
+				ft_memccpy.c		\
+				ft_memcpy.c			\
+				ft_memmove.c		\
+				ft_memset.c			\
 				ft_power.c			\
 				ft_putchar.c		\
 				ft_putnbr_base.c	\
@@ -35,6 +40,7 @@ SRCS		=	ft_atoi_base.c		\
 				ft_strcpy.c			\
 				ft_strdup.c			\
 				ft_strlen.c			\
+				ft_strsplit.c		\
 				ft_strstr.c			\
 				ft_swap.c			\
 				ft_wrong_base.c

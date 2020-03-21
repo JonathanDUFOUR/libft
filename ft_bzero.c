@@ -6,8 +6,14 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:14:24 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:14:47 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/21 07:01:45 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <sys/types.h>
 
+void ft_bzero(void *s, size_t n)
+{
+	while (n)
+		((char *) s)[--n] = 0;
+}

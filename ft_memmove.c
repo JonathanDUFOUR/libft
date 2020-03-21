@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:23:58 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:51:33 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/21 07:07:46 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/21 07:32:45 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <sys/types.h>
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*output;
+	size_t	i;
 
-	if (!(output = (char *) malloc(size)))
-		return (NULL);
-	while (size > 0)
-		output[size--] = 0;
-	output[size] = 0;
-	return (output);
+	if (src < dest)
+		return (ft_memcpy(dest, src, n));
+	i = 0;
+	while (i < n)
+	{
+		((char *) dest)[i] = ((char *) src)[i];
+		++i;
+	}
+	return (dest);
 }

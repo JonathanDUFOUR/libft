@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:23:58 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:51:33 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/21 07:04:31 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/21 07:31:57 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <sys/types.h>
-#include "libft.h"
 
-void	*ft_memalloc(size_t size)
+#ifndef NULL
+# define NULL 0
+#endif
+
+void				*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	*output;
+	char	*d_cpy;
+	char	*s_cpy;
 
-	if (!(output = (char *) malloc(size)))
-		return (NULL);
-	while (size > 0)
-		output[size--] = 0;
-	output[size] = 0;
-	return (output);
+	d_cpy = (char *) dest;
+	s_cpy = (char *) src;
+	while (n--)
+		if ((*d_cpy++ = *s_cpy++) == c)
+			return (d_cpy);
+	return (NULL);
 }
