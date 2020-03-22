@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:26:33 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 22:49:12 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/22 22:44:18 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/22 22:47:18 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int     ft_strncmp(char *s1, char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
+	while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
 		++i;
 	return (s1[i] - s2[i]);
 }
