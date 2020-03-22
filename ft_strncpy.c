@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:21:03 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 18:41:36 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/21 23:22:40 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/21 23:27:06 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
-{
-	int	res;
-	int	sign;
-	int	i;
+#include <sys/types.h>
+#include "libft.h"
 
-	res = 0;
-	sign = 1;
+char	*ft_strncpy(char *dest, const char *src, size_t n)
+{
+	size_t i;
+
 	i = 0;
-	while ((str[i] >= 8 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (i < n && src[i])
 	{
-		sign = (str[i] == '-' ? -1 : 1);
-		i++;
+		dest[i] = src[i];
+		++i;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - 48;
-		i++;
-	}
-	return (res * sign);
+	ft_bzero(&dest[i], n - i);
+	return (dest);
 }

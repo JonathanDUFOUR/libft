@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/21 07:29:00 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/22 02:29:24 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ SRCS		=	ft_atoi_base.c		\
 				ft_itoa.c			\
 				ft_memalloc.c		\
 				ft_memccpy.c		\
+				ft_memchr.c			\
+				ft_memcmp.c			\
 				ft_memcpy.c			\
 				ft_memmove.c		\
 				ft_memset.c			\
@@ -39,7 +41,10 @@ SRCS		=	ft_atoi_base.c		\
 				ft_strcmp.c			\
 				ft_strcpy.c			\
 				ft_strdup.c			\
+				ft_strlcat.c		\
 				ft_strlen.c			\
+				ft_strncat.c		\
+				ft_strncpy.c		\
 				ft_strsplit.c		\
 				ft_strstr.c			\
 				ft_swap.c			\

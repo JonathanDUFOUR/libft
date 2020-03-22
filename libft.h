@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/21 07:22:28 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 02:33:44 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char		*ft_itoa_base(int nbr, char *base);
 char		*ft_itoa(int nbr);
 void		*ft_memalloc(size_t size);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void		*ft_memchr(void *s, int c, size_t n);
+int			ft_memcmp(void *s1, void *s2, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
@@ -38,11 +40,14 @@ void		ft_putnbr_base(int nbr, char *base);
 void		ft_putnbr(int nbr);
 void		ft_putstr(char *str);
 int			ft_sqrt(int nbr);
-char		*ft_strcat(char *dest, char *src);
+char		*ft_strcat(char *dest, const char *src);
 int			ft_strcmp(char *s1, char *s2);
-char		*ft_strcpy(char *dest, char *src);
+char		*ft_strcpy(char *dest, const char *src);
 char		*ft_strdup(char *str);
+size_t		ft_strlcat(char *dest, const char *src, size_t size);
 size_t		ft_strlen(const char *str);
+char		*ft_strncat(char *dest, const char *src, size_t n);
+char		*ft_strncpy(char *dest, const char *src, size_t n);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_strstr(char *str, char *to_find);
 void		ft_swap(int *a, int *b);
