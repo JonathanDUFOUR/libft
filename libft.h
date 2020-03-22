@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/22 22:00:35 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 22:22:56 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ size_t		ft_strlcat(char *dest, const char *src, size_t size);
 size_t		ft_strlen(const char *str);
 char		*ft_strncat(char *dest, const char *src, size_t n);
 char		*ft_strncpy(char *dest, const char *src, size_t n);
+char		*ft_strnstr(char *str, const char *to_find, size_t n);
 char		*ft_strrchr(const char *s, int c);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_strstr(char *str, const char *to_find);
