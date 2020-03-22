@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 07:04:31 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 18:29:41 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/22 19:09:16 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/22 19:11:21 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
 #include <stdlib.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	ft_memdel(void **ap)
 {
-	char	*d_cpy;
-	char	*s_cpy;
-
-	d_cpy = (char *) dest;
-	s_cpy = (char *) src;
-	while (n--)
-		if ((*d_cpy++ = *s_cpy++) == c)
-			return (d_cpy);
-	return (NULL);
+	free(*ap);
+	*ap = NULL;
 }

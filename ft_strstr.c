@@ -6,11 +6,11 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:28:03 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:28:05 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 17:34:14 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *str, const char *to_find)
 {
 	int	i;
 	int	j;

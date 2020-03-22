@@ -6,35 +6,31 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:38 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:23:40 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 18:28:51 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <sys/types.h>
 #include "libft.h"
-
-#ifndef NULL
-# define NULL 0
-#endif
 
 char	*ft_itoa_base(int nbr, char *base)
 {
 	char			*output;
 	unsigned int	abs;
-	int				sign;
-	int				len;
-	int				bs;
-	int				i;
+	char			sign;
+	size_t			len;
+	size_t			bs;
+	size_t			i;
 
 	if (ft_wrong_base(base))
 		return (0);
-	sign = (nbr < 0 ? 1 : 0);
-	abs = (sign ? -nbr : nbr);
-	len = 1;
+	sign = (nbr < 0 ? 'n' : 'p');
+	abs = (sign == 'n' ? -nbr : nbr);
+	len = (sign == 'n' ? 2 : 1);
 	bs = ft_strlen(base);
 	while ((unsigned int)ft_power(bs, len) <= abs)
 		len++;
-	len += sign;
 	if (!(output = (char *) ft_memalloc((len + 1) * sizeof(char))))
 		return (NULL);
 	i = (sign ? 1 : 0);
@@ -44,7 +40,7 @@ char	*ft_itoa_base(int nbr, char *base)
 		output[len] = base[abs % bs];
 		abs /= bs;
 	}
-	if (sign)
+	if (sign == 'n')
 		output[0] = '-';
 	return (output);
 }

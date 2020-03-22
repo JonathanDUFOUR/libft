@@ -6,15 +6,12 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 18:55:17 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 22:10:13 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 17:22:12 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
-
-#ifndef NULL
-# define NULL 0
-#endif
+#include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

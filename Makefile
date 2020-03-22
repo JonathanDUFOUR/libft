@@ -6,48 +6,53 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/22 02:29:24 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/22 20:32:49 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 
-SRCS		=	ft_atoi_base.c		\
-				ft_atoi.c			\
-				ft_bzero.c			\
-				ft_cat.c			\
-				ft_convert_base.c	\
-				ft_file_size.c		\
-				ft_indexof.c		\
-				ft_int_size.c		\
-				ft_isdigit.c		\
-				ft_isspace.c		\
-				ft_itoa_base.c		\
-				ft_itoa.c			\
-				ft_memalloc.c		\
-				ft_memccpy.c		\
-				ft_memchr.c			\
-				ft_memcmp.c			\
-				ft_memcpy.c			\
-				ft_memmove.c		\
-				ft_memset.c			\
-				ft_power.c			\
-				ft_putchar.c		\
-				ft_putnbr_base.c	\
-				ft_putnbr.c			\
-				ft_putstr.c			\
-				ft_sqrt.c			\
-				ft_strcat.c			\
-				ft_strcmp.c			\
-				ft_strcpy.c			\
-				ft_strdup.c			\
-				ft_strlcat.c		\
-				ft_strlen.c			\
-				ft_strncat.c		\
-				ft_strncpy.c		\
-				ft_strsplit.c		\
-				ft_strstr.c			\
-				ft_swap.c			\
+SRCS		=	ft_atoi_base.c			\
+				ft_atoi.c				\
+				ft_bzero.c				\
+				ft_cat.c				\
+				ft_convert_base.c		\
+				ft_file_size.c			\
+				ft_fill_sub_len_tab.c	\
+				ft_fill_sub_tab.c		\
+				ft_indexof.c			\
+				ft_int_size.c			\
+				ft_ischarset.c			\
+				ft_isdigit.c			\
+				ft_isspace.c			\
+				ft_itoa_base.c			\
+				ft_itoa.c				\
+				ft_memalloc.c			\
+				ft_memccpy.c			\
+				ft_memchr.c				\
+				ft_memcmp.c				\
+				ft_memcpy.c				\
+				ft_memdel.c				\
+				ft_memmove.c			\
+				ft_memset.c				\
+				ft_power.c				\
+				ft_putchar.c			\
+				ft_putnbr_base.c		\
+				ft_putnbr.c				\
+				ft_putstr.c				\
+				ft_sqrt.c				\
+				ft_strcat.c				\
+				ft_strcmp.c				\
+				ft_strcpy.c				\
+				ft_strdup.c				\
+				ft_strlcat.c			\
+				ft_strlen.c				\
+				ft_strncat.c			\
+				ft_strncpy.c			\
+				ft_strsplit.c			\
+				ft_strstr.c				\
+				ft_substrs_count.c		\
+				ft_swap.c				\
 				ft_wrong_base.c
 
 OBJECTS		=	${SRCS:.c=.o}

@@ -6,15 +6,12 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:57 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:26:58 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 18:30:08 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
-
-#ifndef NULL
-# define NULL 0
-#endif
 
 char	*ft_strdup(char *str)
 {

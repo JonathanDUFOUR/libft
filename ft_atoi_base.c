@@ -6,10 +6,11 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:21:19 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:21:22 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 17:35:09 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <sys/types.h>
 #include "libft.h"
 
 int	ft_atoi_base(char *str, char *base)

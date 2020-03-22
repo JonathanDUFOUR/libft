@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_fill_sub_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 07:04:31 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 18:29:41 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/22 19:56:45 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/22 20:49:05 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char	**ft_fill_sub_tab(char **tab, size_t *sub_len, const char *s, char c)
 {
-	char	*d_cpy;
-	char	*s_cpy;
-
-	d_cpy = (char *) dest;
-	s_cpy = (char *) src;
-	while (n--)
-		if ((*d_cpy++ = *s_cpy++) == c)
-			return (d_cpy);
-	return (NULL);
+	size_t	i;
+	size_t	j;
+	
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (!ft_ischarset(s[i], &c))
+		{
+			ft_strncpy(tab[j], s + i, sub_len[j]);
+			i += sub_len[j];
+			++j;
+		}
+		else
+			++i;
+	}
+	return (tab);
 }

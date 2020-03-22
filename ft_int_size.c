@@ -6,16 +6,18 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:22:40 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:22:42 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 17:05:35 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_int_size(int nbr)
+#include <sys/types.h>
+
+size_t	ft_int_size(int nbr)
 {
-	int				size;
+	size_t	size;
 
 	size = 1 + (nbr < 0);
 	while (nbr /= 10)
-		size++;
+		++size;
 	return (size);
 }

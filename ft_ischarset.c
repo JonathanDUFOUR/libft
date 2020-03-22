@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_ischarset.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 07:04:31 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 18:29:41 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/22 14:27:41 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/22 14:32:21 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <stdlib.h>
-
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+int	ft_ischarset(char c, char *charset)
 {
-	char	*d_cpy;
-	char	*s_cpy;
+	int	i;
 
-	d_cpy = (char *) dest;
-	s_cpy = (char *) src;
-	while (n--)
-		if ((*d_cpy++ = *s_cpy++) == c)
-			return (d_cpy);
-	return (NULL);
+	i = -1;
+	while (charset[++i] && charset[i] != c);
+	return (charset[i] ? 1 : 0);
 }

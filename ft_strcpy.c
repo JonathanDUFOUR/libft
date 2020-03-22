@@ -6,11 +6,11 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:45 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:26:46 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 17:31:09 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int	i;
 

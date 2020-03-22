@@ -6,21 +6,18 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:21 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:23:23 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 18:29:15 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <sys/types.h>
 #include "libft.h"
 
-#ifndef NULL
-# define NULL 0
-#endif
-
 char	*ft_itoa(int nbr)
 {
-	char			*output;
-	int				len;
+	char	*output;
+	size_t	len;
 
 	len = ft_int_size(nbr);
 	if (!(output = (char *) ft_memalloc((len + 1) * sizeof(char))))
