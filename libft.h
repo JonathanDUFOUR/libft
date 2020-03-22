@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/22 20:49:42 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/22 21:20:25 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void		ft_putnbr(int nbr);
 void		ft_putstr(char *str);
 int			ft_sqrt(int nbr);
 char		*ft_strcat(char *dest, const char *src);
+char		*ft_strchr(const char *s, int c);
 int			ft_strcmp(char *s1, char *s2);
 char		*ft_strcpy(char *dest, const char *src);
 char		*ft_strdup(char *str);
