@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/24 05:28:35 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/24 05:55:26 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_toupper.c			\
 				ft_wrong_base.c
 
-OBJECTS		=	${SRCS:.c=.o}
+OBJECTS		:=	${SRCS:.c=.o}
 
 CFLAGS		=	-Wall -Wextra -Werror
 
