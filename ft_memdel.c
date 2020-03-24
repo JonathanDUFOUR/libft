@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 19:09:16 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 19:11:21 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/24 05:00:21 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,10 @@ void	ft_memdel(void **ap)
 {
 	free(*ap);
 	*ap = NULL;
+}
+
+void	ft_neo_memdel(void *ap)
+{
+	free(*(void **)ap);
+	*(void **)ap = NULL;
 }

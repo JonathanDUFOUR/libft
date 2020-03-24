@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/22 22:48:11 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/24 04:55:47 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,15 @@ char		**ft_fill_sub_tab(char **tab, size_t *sub_len, const char *s, char c);
 size_t		*ft_fill_sub_len_tab(size_t *tab, size_t size, const char *s, char *charset);
 ssize_t		ft_indexof(char c, char *str);
 int			ft_int_size(int nbr);
+int			ft_isalnum(int c);
+int			ft_isalpha(int c);
+int			ft_isascii(int c);
 int			ft_ischarset(char c, const char *charset);
-int			ft_isdigit(char c);
-int			ft_isspace(char c);
+int			ft_isdigit(int c);
+int			ft_islower(int c);
+int			ft_isprint(int c);
+int			ft_isspace(int c);
+int			ft_isupper(int c);
 char		*ft_itoa_base(int nbr, char *base);
 char		*ft_itoa(int nbr);
 void		*ft_memalloc(size_t size);
@@ -60,6 +66,8 @@ char		**ft_strsplit(char const *s, char c);
 char		*ft_strstr(char *str, const char *to_find);
 size_t		ft_substrs_count(const char *s, const char *charset);
 void		ft_swap(int *a, int *b);
+int			ft_tolower(int c);
+int			ft_toupper(int c);
 int			ft_wrong_base(char *base);
 
 #endif

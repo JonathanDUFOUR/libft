@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/22 22:48:42 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/24 04:56:08 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,15 @@ SRCS		=	ft_atoi_base.c			\
 				ft_fill_sub_tab.c		\
 				ft_indexof.c			\
 				ft_int_size.c			\
+				ft_isalnum.c			\
+				ft_isalpha.c			\
+				ft_isascii.c			\
 				ft_ischarset.c			\
 				ft_isdigit.c			\
+				ft_islower.c			\
+				ft_isprint.c			\
 				ft_isspace.c			\
+				ft_isupper.c			\
 				ft_itoa_base.c			\
 				ft_itoa.c				\
 				ft_memalloc.c			\
@@ -57,6 +63,8 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strstr.c				\
 				ft_substrs_count.c		\
 				ft_swap.c				\
+				ft_tolower.c			\
+				ft_toupper.c			\
 				ft_wrong_base.c
 
 OBJECTS		=	${SRCS:.c=.o}
