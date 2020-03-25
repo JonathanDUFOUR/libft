@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/24 05:28:58 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/25 02:44:13 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ size_t		ft_substrs_count(const char *s, const char *charset);
 void		ft_swap(int *a, int *b);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
+int			*ft_ultimate_tolower(int *c);
+int			*ft_ultimate_toupper(int *c);
 int			ft_wrong_base(char *base);
 
 #endif

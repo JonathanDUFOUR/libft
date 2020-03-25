@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/24 05:55:26 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/25 01:55:06 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,8 @@ SRCS		=	ft_atoi_base.c			\
 				ft_swap.c				\
 				ft_tolower.c			\
 				ft_toupper.c			\
+				ft_ultimate_tolower.c	\
+				ft_ultimate_toupper.c	\
 				ft_wrong_base.c
 
 OBJECTS		:=	${SRCS:.c=.o}

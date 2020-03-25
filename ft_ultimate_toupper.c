@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_toupper.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/24 04:52:27 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/25 01:58:05 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/25 01:35:32 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/25 02:44:31 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+int	*ft_ultimate_toupper(int *c)
 {
-	return (ft_isupper(c) * ('a' - 'A'));
+	*c -= ft_isupper(*c) * 32;
+	return (c);
 }
