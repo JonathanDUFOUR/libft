@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/26 19:46:50 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/26 22:39:44 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int		ft_strcmp(char *s1, char *s2);
 char	*ft_strcpy(char *dest, const char *src);
 void	ft_strdel(char **as);
 char	*ft_strdup(char const *s);
+int		ft_strequ(char const *s1, char const *s2);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned, char *));
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
@@ -73,6 +74,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strncat(char *dest, const char *src, size_t n);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
+int		ft_strnequ(char const *s1, char const *s2);
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(char *s, const char *to_find, size_t n);
 char	*ft_strrchr(const char *s, int c);
