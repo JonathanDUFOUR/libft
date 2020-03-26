@@ -6,37 +6,30 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:21:19 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 17:35:09 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/25 20:53:16 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include "libft.h"
 
-int	ft_atoi_base(char *str, char *base)
+int	ft_atoi_base(char const *s, char *b)
 {
 	int res;
 	int	sign;
-	int	bs;
-	int	i;
+	int	b_size;
 
-	if (ft_wrong_base(base))
+	if (ft_wrong_base(b))
 		return (0);
 	res = 0;
 	sign = 1;
-	bs = ft_strlen(base);
-	i = 0;
-	while ((str[i] >= 8 && str[i] <= 13) || str[i] == ' ')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		sign = (str[i] == '-' ? -1 : 1);
-		i++;
-	}
-	while (str[i] && ft_indexof(str[i], base) != -1)
-	{
-		res = res * bs + ft_indexof(str[i], base);
-		i++;
-	}
-	return (res * sign);
+	b_size = ft_strlen(b);
+	while (ft_isspace(*s))
+		++s;
+	if (*s == '-' || *s == '+')
+		if (*s++ == '-')
+			sign ^= ~1u;
+	while (*s && ft_indexof(*s, b) != -1)
+		res = res * b_size + ft_indexof(*s++, b);
+	return (sign * res);
 }

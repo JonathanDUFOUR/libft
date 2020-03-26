@@ -6,13 +6,14 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:25:59 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:26:00 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/25 18:28:57 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <sys/types.h>
 #include "primes.h"
 
-int	ft_sqrt(int nb)
+int	ft_sqrt(u_int32_t nb)
 {
 	int	i;
 

@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_size.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:22:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 00:00:29 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/26 02:04:40 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/26 02:09:13 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <unistd.h>
+#include "libft.h"
 
-size_t	ft_file_size(char *f)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	struct stat st;
-
-	return (!stat(f, &st) ? st.st_size : -1);
+	write(fd, s, ft_strlen(s));
+	write(1, "\n", 1);
 }

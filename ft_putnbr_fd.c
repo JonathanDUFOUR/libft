@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_size.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:22:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 00:00:29 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/26 02:19:11 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/26 02:32:25 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <unistd.h>
 
-size_t	ft_file_size(char *f)
+void	ft_putnbr_fd(int n, int fd)
 {
-	struct stat st;
+	unsigned int	abs;
+	int				sign;
+	char			d;
 
-	return (!stat(f, &st) ? st.st_size : -1);
+	abs = (n < 0 ? -n : n);
+	sign = (n < 0 ? 1 : 0);
+	if (sign)
+		write(fd, "-", 1);
+	if (abs > 9)
+		ft_putnbr_fd(abs / 10, fd);
+	d = abs % 10 + 48;
+	write(fd, &d, 1);
 }

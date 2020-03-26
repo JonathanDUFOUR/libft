@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_size.c                                     :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:22:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 00:00:29 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/25 19:04:21 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/25 19:13:12 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <unistd.h>
 
-size_t	ft_file_size(char *f)
+void ft_putchar_fd(char c, int fd)
 {
-	struct stat st;
-
-	return (!stat(f, &st) ? st.st_size : -1);
+	write(fd, &c, 1);
 }

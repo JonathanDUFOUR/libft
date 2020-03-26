@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:46 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 20:50:04 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/26 01:30:55 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,41 @@
 #include <sys/types.h>
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+static char	**populate(char **output, char *ptr, char const *s, char c)
+{
+	size_t	size;
+
+	size = 0;
+	while (*s)
+	{
+		output[size++] = ptr;
+		while (*s && *s != c)
+			*ptr++ = *s++;
+		*ptr++ = 0;
+		while (*s && *s == c)
+			++s;
+	}
+	return (output);
+}
+
+char	**ft_neo_strsplit(char const *s, char c)
 {
 	char	**output;
 	size_t	size;
-	size_t	*sub_len;
-	size_t	i;
+	size_t	len;
 
-	size = ft_substrs_count(s, &c);
-	if (!(output = ft_memalloc((size + 1) * sizeof(char *))))
-		return (NULL);
-	if (!(sub_len = ft_memalloc((size + 1) * sizeof(size_t))))
-		return (NULL);
-	sub_len = ft_fill_sub_len_tab(sub_len, size, s, &c);
-	i = 0;
-	while (i < size)
+	size = 0;
+	len = 0;
+	while (*s && *s == c)
+		++s;
+	while (s[len])
 	{
-		if (!(output[i] = ft_memalloc((sub_len[i] + 1) * sizeof(char))))
-			return (NULL);
-		output[i][sub_len[i]] = 0;
-		++i;
+		if (s[len] != c && (!len || s[len - 1] == c))
+			++size;
+		++len;
 	}
-	output = ft_fill_sub_tab(output, sub_len, s, c);
-	return (output);
+	if (!(output = malloc(sizeof(char *) * (size + 1) + len + 1)))
+		return (NULL);
+	output[size] = NULL;
+	return (populate(output, (char *)(output + size + 1), s, c));
 }

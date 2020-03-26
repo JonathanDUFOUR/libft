@@ -1,0 +1,59 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    example+explain_ft_neo_strsplit                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jdufour <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/03/26 01:33:03 by jdufour           #+#    #+#              #
+#    Updated: 2020/03/26 01:33:35 by jdufour          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+"coucou le monde" " "
+
+size = 3
+len = 15
+{
+	8 * 4 + 15 + 1
+	<=>
+	32 + 16
+	<=>
+	48
+	    A        B        C        D     E F G H I J  K L M  N O P Q R S  T
+	[   E    |   L    |   O    |  NULL  |c|o|u|c|o|u|\0|l|e|\0|m|o|n|d|e|\0]
+
+	s = "coucou le monde"
+	c = ' '
+	sub_size = 0
+	output = A
+	ptr = E
+
+	output[sub_size++] = ptr
+	TQ (*s != ' ')
+		*ptr++ = *s++
+	*ptr++ = 0
+
+	s = "le monde"
+	sub_size = 1
+	output = A
+	ptr = L
+
+	output[sub_size++] = ptr
+	TQ (*s != ' ')
+		*ptr++ = *s++
+	*ptr++ = 0
+
+	s = "monde"
+	sub_size = 2
+	ptr = O
+
+	output[sub_size++] = ptr
+	TQ (*s != ' ')
+		*ptr++ = *s++
+	*ptr++ = 0
+
+	s = ""
+	sub_size = 3
+	ptr = U
+}

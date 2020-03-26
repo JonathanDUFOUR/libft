@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_size.c                                     :+:      :+:    :+:   */
+/*   ft_print_int_bits.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:22:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 00:00:29 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/25 03:01:12 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/25 03:51:43 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
+#include "libft.h"
 
-size_t	ft_file_size(char *f)
+void	ft_print_int_bits(unsigned int nbr)
 {
-	struct stat st;
+	char	i;
 
-	return (!stat(f, &st) ? st.st_size : -1);
+	i = 4;
+	while (i--)
+	{
+		ft_padded_putnbr_base((nbr >> 8 * i) & 0xFF, "01", 8);
+		if (i)
+			ft_putchar(' ');
+	}
 }

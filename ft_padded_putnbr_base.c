@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_file_size.c                                     :+:      :+:    :+:   */
+/*   ft_padded_putnbr_base.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:22:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 00:00:29 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/25 03:36:00 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/25 18:28:05 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
-#include <sys/stat.h>
+#include <unistd.h>
+#include "libft.h"
 
-size_t	ft_file_size(char *f)
+void	ft_padded_putnbr_base(u_int32_t nbr, const char *base, u_int8_t len)
 {
-	struct stat st;
+	size_t			bs;
+	char			d;
 
-	return (!stat(f, &st) ? st.st_size : -1);
+	if (ft_wrong_base(base))
+		return ;
+	bs = ft_strlen(base);
+	if (nbr >= bs || --len)
+		ft_padded_putnbr_base(nbr / bs, base, len);
+	d = base[nbr % bs];
+	write(1, &d, 1);
 }
