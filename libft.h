@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/26 22:39:44 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/27 00:48:19 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int		ft_strnequ(char const *s1, char const *s2);
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(char *s, const char *to_find, size_t n);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strrev(char *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(char *s, const char *to_find);
 size_t	ft_substrs_count(const char *s, const char *charset);
