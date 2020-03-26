@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:46 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 01:30:55 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/26 02:55:39 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	**populate(char **output, char *ptr, char const *s, char c)
 	return (output);
 }
 
-char	**ft_neo_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**output;
 	size_t	size;
