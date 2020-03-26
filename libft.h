@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/26 02:29:39 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/26 03:23:20 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ int		ft_strcmp(char *s1, char *s2);
 char	*ft_strcpy(char *dest, const char *src);
 void	ft_strdel(char **as);
 char	*ft_strdup(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned, char *));
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 char	*ft_strncat(char *dest, const char *src, size_t n);

@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/26 02:30:38 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/26 03:28:58 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,6 @@ SRCS		=	ft_atoi_base.c			\
 				ft_cat.c				\
 				ft_convert_base.c		\
 				ft_file_size.c			\
-				ft_fill_sub_len_tab.c	\
-				ft_fill_sub_tab.c		\
 				ft_indexof.c			\
 				ft_int_size.c			\
 				ft_isalnum.c			\
@@ -61,6 +59,8 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strcpy.c				\
 				ft_strdel.c				\
 				ft_strdup.c				\
+				ft_striter.c			\
+				ft_striteri.c			\
 				ft_strlcat.c			\
 				ft_strlen.c				\
 				ft_strncat.c			\
