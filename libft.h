@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/26 03:23:20 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/26 03:32:39 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	ft_bzero(void *s, size_t n);
 void	ft_cat(char **f);
 char	*ft_convert_base(char *n, char *base_from, char *base_to);
 size_t	ft_file_size(char *f);
-size_t	*ft_fill_sub_len_tab(size_t *tab, size_t size, const char *s, char *charset);
-char	**ft_fill_sub_tab(char **tab, size_t *sub_len, const char *s, char c);
 ssize_t	ft_indexof(char c, char *str);
 int		ft_int_size(int n);
 int		ft_isalnum(int c);
