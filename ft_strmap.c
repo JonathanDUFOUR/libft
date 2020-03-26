@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:26:57 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 19:24:01 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/26 17:47:35 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/26 19:21:20 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(char const *str)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*output;
-	int		len;
-	int		i;
+	char	*cpy;
+	char	*ptr;
 
-	len = ft_strlen(str);
-	if (!(output = ft_memalloc((len + 1) * sizeof(char))))
-		return (NULL);
-	i = -1;
-	while (str[++i])
-		output[i] = str[i];
-	output[i] = 0;
-	return (output);
+	if ((cpy = ft_strdup(s)))
+	{
+		ptr = cpy - 1;
+		while (*++ptr)
+			*ptr = f(*ptr);
+	}
+	return (cpy);
 }
