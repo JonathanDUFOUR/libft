@@ -6,18 +6,15 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 22:44:18 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/24 01:54:21 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/27 01:19:57 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 
-int     ft_strncmp(char *s1, char *s2, size_t n)
+int     ft_strncmp(char const *s1, char const *s2, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
-		++i;
-	return (i == n ? 0 : s1[i] - s2[i]);
+	while (n && s1 && s2 && *s1 && *s1++ == *s2++)
+		--n;
+	return (!!n * (*s1 - *s2));
 }

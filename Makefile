@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/26 23:37:14 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/27 06:59:41 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_putstr.c				\
 				ft_putstr_fd.c			\
 				ft_sqrt.c				\
+				ft_strcasecmp.c			\
 				ft_strcat.c				\
 				ft_strchr.c				\
 				ft_strclr.c				\
@@ -66,6 +67,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strlen.c				\
 				ft_strmap.c				\
 				ft_strmapi.c			\
+				ft_strncasecmp.c		\
 				ft_strncat.c			\
 				ft_strncmp.c			\
 				ft_strncpy.c			\
@@ -88,6 +90,11 @@ OBJECTS		:=	${SRCS:.c=.o}
 
 CFLAGS		=	-Wall -Wextra -Werror
 
+ifeq (${DEBUG}, TRUE)
+	CFLAGS	+= -g
+	MKFLAGS	+= DEBUG=TRUE
+endif
+
 CC			=	gcc
 
 AR_RC		=	ar rcs
@@ -99,9 +106,6 @@ ${NAME}:	${OBJECTS}
 	${AR_RC} $@ $^
 
 all:	${NAME}
-
-debug:	CFLAGS += -g
-debug:	${NAME}
 
 %.o:	%.c
 	${CC} -c ${CFLAGS} -o $@ $<

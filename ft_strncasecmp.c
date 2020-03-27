@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncasecmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:26:33 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/27 01:13:13 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/27 02:38:36 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/27 07:00:07 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char const *s1, char const *s2)
+#include <sys/types.h>
+#include "libft.h"
+
+int     ft_strncasecmp(char const *s1, char const *s2, size_t n)
 {
-	while (s1 && s2 && *s1 && *s2 && *s1++ == *s2)
-		++s2;
+	while (n && s1 && s2 && *s1 && ft_toupper(*s1++) == ft_toupper(*s2++))
+		--n;
 	return (*s1 - *s2);
 }
+

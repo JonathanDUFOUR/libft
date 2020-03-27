@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/26 22:41:53 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/27 00:41:38 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/27 01:07:30 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,27 +19,20 @@ static void	char_swap(char *c1, char *c2)
 	*c1 = *c1 ^ *c2;
 }
 
-char		*ft_strrev(char *s)
+char    *ft_strrev(char *s)
 {
 	char	*ptr;
-	size_t	i;
-	size_t	l2;
+	ssize_t	i;
+	size_t	o;
 
-	i = 0;
-	l2 = 0;
-	if (!(ptr = s))
+	o = 0;
+	if (!(ptr = s) || !*s || !s[1])
 		return (s);
-	while (s[i] && s[l2] && s[l2 + 1] && ++i)
-		l2 += 2;
-	if (!i)
-		return (s);
-	l2 = s[l2] == 0;
-	s += i;
-	i = !l2;
-	while (s[i])
-	{
-		char_swap(&s[i], &s[-(i + l2)]);
-		++i;
-	}
+	while (*s && s[o] && s[o + 1] && ++s) 
+		++o;
+	o = (s[o] == 0);
+	i = !o - 1;
+	while (s[++i])
+		char_swap(s + i, s - (i + o));
 	return (ptr);
 }

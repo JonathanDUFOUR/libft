@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcasecmp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:26:33 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/27 01:13:13 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/27 00:58:19 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/27 01:37:06 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char const *s1, char const *s2)
+#include "libft.h"
+
+int	ft_strcasecmp(char const *s1, char const *s2)
 {
-	while (s1 && s2 && *s1 && *s2 && *s1++ == *s2)
+	while (s1 && s2 && *s1 && ft_toupper(*s1++) == ft_toupper(*s2))
 		++s2;
 	return (*s1 - *s2);
 }
