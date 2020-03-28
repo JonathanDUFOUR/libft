@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/28 22:23:33 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/28 23:33:40 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ char	*ft_strrev(char *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(char const *s, const char *to_find);
 char	*ft_strsub(char const *si, unsigned start, size_t len);
+char	*ft_strtrim(char const *s);
 size_t	ft_substrs_count(const char *s, const char *charset);
 void	ft_swap(int *a, int *b);
 int		ft_tolower(int c);

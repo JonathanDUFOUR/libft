@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/28 22:24:20 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/28 23:34:02 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strsplit.c			\
 				ft_strstr.c				\
 				ft_strsub.c				\
+				ft_strtrim.c			\
 				ft_substrs_count.c		\
 				ft_swap.c				\
 				ft_tolower.c			\
