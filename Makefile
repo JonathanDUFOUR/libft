@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/27 06:59:41 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/28 06:57:38 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_putstr_fd.c			\
 				ft_sqrt.c				\
 				ft_strcasecmp.c			\
+				ft_strcaseequ.c			\
 				ft_strcat.c				\
 				ft_strchr.c				\
 				ft_strclr.c				\
@@ -68,6 +69,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strmap.c				\
 				ft_strmapi.c			\
 				ft_strncasecmp.c		\
+				ft_strncaseequ.c		\
 				ft_strncat.c			\
 				ft_strncmp.c			\
 				ft_strncpy.c			\

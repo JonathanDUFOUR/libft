@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/27 07:01:12 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/28 06:56:23 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
 int		ft_sqrt(u_int32_t n);
 int		ft_strcasecmp(char const *s1, char const *s2);
+int		ft_strcaseequ(char const *s1, char const *s2);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strchr(const char *s, int c);
 void	ft_strclr(char *s);
@@ -73,6 +74,7 @@ size_t	ft_strlen(const char *str);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncasecmp(char const *s1, char const *s2, size_t n);
+int		ft_strncaseequ(char const *s1, char const *s2, size_t n);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 int		ft_strncmp(char const *s1, char const *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
