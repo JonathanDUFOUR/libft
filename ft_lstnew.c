@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:21:03 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/29 00:12:21 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/29 00:37:47 by jdufour           #+#    #+#             */
+/*   Updated: 2020/03/29 01:13:30 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int	ft_atoi(char const *s)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	int	res;
-	int	sign;
+	t_list	*lst;
 
-	res = 0;
-	sign = 1;
-	while (ft_isspace(*s))
-		++s;
-	if (*s == '-' || *s == '+')
-		if (*s++ == '-')
-			sign ^= ~1u;
-	while (ft_isdigit(*s))
-		res = res * 10 + *s++ - '0';
-	return (res * sign);
+	if (!(lst = malloc(sizeof(t_list))))
+		return (NULL);
+	if (!content)
+	{
+		lst->content = NULL;
+		lst->content_size = 0;
+		return (lst);
+	}
+	if (!(lst->content = malloc(content_size)))
+	{
+		free(lst);
+		return (NULL);
+	}
+	lst->content = (void *)content;
+	lst->content_size = content_size;
+	lst->next = NULL;
+	return (lst);
 }
