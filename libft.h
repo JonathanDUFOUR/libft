@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/03/29 04:30:31 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/03/30 02:48:03 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int			ft_atoi(char const *s);
 void		ft_bzero(void *s, size_t n);
 void		ft_cat(char **f);
 char		*ft_convert_base(char *n, char *base_from, char *base_to);
+int			ft_do_op(int a, int b, char c, char *op);
 size_t		ft_file_size(char *f);
 ssize_t		ft_indexof(char c, char *str);
 int			ft_int_size(int n);

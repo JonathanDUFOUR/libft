@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/29 04:06:37 by jdufour          ###   ########.fr        #
+#    Updated: 2020/03/30 02:48:23 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_bzero.c				\
 				ft_cat.c				\
 				ft_convert_base.c		\
+				ft_do_op.c				\
 				ft_file_size.c			\
 				ft_indexof.c			\
 				ft_int_size.c			\
