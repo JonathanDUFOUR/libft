@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/03/30 02:48:23 by jdufour          ###   ########.fr        #
+#    Updated: 2020/04/02 15:42:29 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRCS		=	ft_atoi_base.c			\
 				ft_bzero.c				\
 				ft_cat.c				\
 				ft_convert_base.c		\
-				ft_do_op.c				\
+				ft_cut_spaces.c			\
+				ft_doop.c				\
 				ft_file_size.c			\
 				ft_indexof.c			\
 				ft_int_size.c			\
@@ -48,7 +49,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_memset.c				\
 				ft_padded_putnbr_base.c	\
 				ft_power.c				\
-				ft_print_int_bits.c		\
+				ft_print_bits.c			\
 				ft_putchar.c			\
 				ft_putchar_fd.c			\
 				ft_putendl.c			\
@@ -81,6 +82,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strncat.c			\
 				ft_strncmp.c			\
 				ft_strncpy.c			\
+				ft_strndup.c			\
 				ft_strnequ.c			\
 				ft_strnew.c				\
 				ft_strnstr.c			\

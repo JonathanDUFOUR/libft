@@ -6,15 +6,15 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 14:27:41 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 14:32:21 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/02 14:25:08 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_ischarset(char c, char *charset)
-{
-	int	i;
+#include "libft.h"
 
-	i = -1;
-	while (charset[++i] && charset[i] != c);
-	return (charset[i] ? 1 : 0);
+t_bool	ft_ischarset(char c, char const *charset)
+{
+	while (*charset && *charset != c)
+		++charset;
+	return (*charset ? TRUE : FALSE);
 }

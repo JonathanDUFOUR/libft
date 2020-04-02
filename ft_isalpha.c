@@ -6,13 +6,13 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 01:57:04 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/24 02:08:04 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/02 14:11:10 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+t_bool	ft_isalpha(int c)
 {
-	return (ft_islower(c) || ft_isupper(c) ? 1 : 0);
+	return (ft_islower(c) || ft_isupper(c) ? TRUE : FALSE);
 }

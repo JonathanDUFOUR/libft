@@ -6,26 +6,13 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 03:42:37 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/24 03:42:39 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/02 14:14:06 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-**	What does a ternary
-**
-**	(c ? a : b)
-**		<=>
-**	((c * a) + (!c * b))
-*/
+#include "libft.h"
 
-/*
-**	Methodes possibles
-**
-**	1/	return (c >= 0 && c <= 127);
-**	2/	return (c >> 7)
-*/
-
-int	ft_isascii(int c)
+t_bool	ft_isascii(int c)
 {
-	return (c >= 0 && c <= 127);
+	return (!(c >> 7));
 }

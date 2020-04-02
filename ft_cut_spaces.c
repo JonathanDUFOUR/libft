@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wrong_base.c                                    :+:      :+:    :+:   */
+/*   ft_cut_spaces.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:28:43 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/02 14:29:13 by jdufour          ###   ########.fr       */
+/*   Created: 2020/04/02 15:42:07 by jdufour           #+#    #+#             */
+/*   Updated: 2020/04/02 16:06:07 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-t_bool	ft_wrong_base(char const *base)
+char	*ft_cut_spaces(char *s)
 {
-	size_t	i;
-	size_t	j;
+	char	*output;
+	char	*cpy;
+	int		spaces;
 
-	if (ft_strlen(base) < 2)
-		return (TRUE);
-	i = 0;
-	while (base[i])
+	cpy = s;
+	spaces = 0;
+	while (*s)
+		if (ft_isspace(*s++))
+			++spaces;
+	s = cpy;
+	if (!(output = ft_memalloc((ft_strlen(s) - spaces + 1) * sizeof(char))))
+		return (NULL);
+	cpy = output;
+	while (*s)
 	{
-		if (base[i] == '-' || base[i] == '+' || ft_isspace(base[i]))
-			return (TRUE);
-		j = i;
-		while (base[++j])
-			if (base[i] == base[j])
-				return (TRUE);
-		++i;
+		if (!ft_isspace(*s))
+			*cpy++ = *s;
+		++s;
 	}
-	return (FALSE);
+	*cpy = 0;
+	return (output);
 }

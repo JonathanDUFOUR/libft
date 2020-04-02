@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_do_op.c                                         :+:      :+:    :+:   */
+/*   ft_print_bits.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/30 02:42:16 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/30 02:47:29 by jdufour          ###   ########.fr       */
+/*   Created: 2020/03/25 03:01:12 by jdufour           #+#    #+#             */
+/*   Updated: 2020/04/02 13:46:49 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_do_op(int a, int b, char c, char *op)
+#include "libft.h"
+
+void	ft_print_bits(unsigned nbr, size_t n)
 {
-	if (c == op[0])
-		return (a + b);
-	if (c == op[1])
-		return (a - b);
-	if (c == op[2])
-		return (a * b);
-	if (c == op[3])
-		return (a / b);
-	if (c == op[4])
-		return (a % b);
-	return (0);
+	while (n--)
+	{
+		ft_padded_putnbr_base((nbr >> 8 * n) & 0xFF, "01", 8);
+		if (n)
+			ft_putchar(' ');
+	}
 }
