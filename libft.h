@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/02 16:02:33 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/02 16:55:29 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ union		u_token
 {
 	t_token	*prev;
 	t_token	*next;
-	char	op;
+	char	symb;
 	int		value;
 };
 
@@ -44,7 +44,6 @@ void		ft_bzero(void *s, size_t n);
 void		ft_cat(char **f);
 char		*ft_convert_base(char *n, char *base_from, char *base_to);
 char		*ft_cut_spaces(char *s);
-int			ft_doop(char *calc);
 size_t		ft_file_size(char *f);
 ssize_t		ft_indexof(char c, char *str);
 int			ft_int_size(int n);
