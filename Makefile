@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/04/03 19:45:36 by jdufour          ###   ########.fr        #
+#    Updated: 2020/04/03 20:58:23 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_substrs_count.c		\
 				ft_swap.c				\
 				ft_toggle_byte.c		\
+				ft_toggle_nbyte.c		\
 				ft_tolower.c			\
 				ft_toupper.c			\
 				ft_ultimate_tolower.c	\

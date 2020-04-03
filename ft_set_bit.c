@@ -6,13 +6,13 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 11:42:51 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/03 11:54:17 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/03 20:52:23 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <inttypes.h>
 
-void	ft_set_bit(void *ptr, unsigned index)
+void	ft_set_bit(uint32_t *ptr, unsigned index)
 {
-	*(unsigned long long *)ptr |= ft_power(2, index);
+	*ptr |= 1UL << (index % 32);
 }

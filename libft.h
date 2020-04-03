@@ -6,11 +6,12 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/03 19:46:08 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/03 20:57:54 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
+#include <inttypes.h>
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -112,7 +113,8 @@ char		*ft_strsub(char const *si, unsigned start, size_t len);
 char		*ft_strtrim(char const *s);
 size_t		ft_substrs_count(const char *s, const char *charset);
 void		ft_swap(int *a, int *b);
-void		ft_toggle_byte(char *ptr);
+void		ft_toggle_byte(uint32_t *ptr);
+void		ft_toggle_nbyte(uint32_t *ptr, uint32_t n);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			*ft_ultimate_tolower(int *c);
