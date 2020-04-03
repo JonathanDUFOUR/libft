@@ -6,13 +6,13 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 11:42:51 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/03 20:52:23 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/03 21:19:42 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <inttypes.h>
 
-void	ft_set_bit(uint32_t *ptr, unsigned index)
+void	ft_set_bit(uint32_t *ptr, uint32_t idx)
 {
-	*ptr |= 1UL << (index % 32);
+	*ptr |= 1UL << (idx % 32);
 }

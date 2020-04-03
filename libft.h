@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/03 20:57:54 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/03 21:19:18 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr(char const *s);
 void		ft_putstr_fd(char const *s, int fd);
 int			ft_sqrt(u_int32_t n);
-void		ft_set_bit(void *ptr, unsigned index);
+void		ft_set_bit(uint32_t *ptr, uint32_t idx);
 int			ft_strcasecmp(char const *s1, char const *s2);
 t_bool		ft_strcaseequ(char const *s1, char const *s2);
 char		*ft_strcat(char *dest, const char *src);
@@ -113,13 +113,13 @@ char		*ft_strsub(char const *si, unsigned start, size_t len);
 char		*ft_strtrim(char const *s);
 size_t		ft_substrs_count(const char *s, const char *charset);
 void		ft_swap(int *a, int *b);
-void		ft_toggle_byte(uint32_t *ptr);
+void		ft_toggle_byte(uint32_t *ptr, uint32_t idx);
 void		ft_toggle_nbyte(uint32_t *ptr, uint32_t n);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			*ft_ultimate_tolower(int *c);
 int			*ft_ultimate_toupper(int *c);
-void		ft_unset_bit(void *ptr, unsigned index);
+void		ft_unset_bit(uint32_t *ptr, uint32_t idx);
 t_bool		ft_wrong_base(const char *b);
 
 #endif
