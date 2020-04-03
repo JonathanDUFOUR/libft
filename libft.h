@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/03 11:52:35 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/03 12:20:06 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			*ft_ultimate_tolower(int *c);
 int			*ft_ultimate_toupper(int *c);
+void		ft_unset_bit(void *ptr, unsigned index);
 t_bool		ft_wrong_base(const char *b);
 
 #endif
