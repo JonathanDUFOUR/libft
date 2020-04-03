@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/02 16:55:29 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/03 11:41:34 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,6 @@
 
 typedef	char			t_bool;
 typedef struct s_list 	t_list;
-typedef union u_token 	t_token;
-
-union		u_token
-{
-	t_token	*prev;
-	t_token	*next;
-	char	symb;
-	int		value;
-};
 
 struct		s_list
 {
@@ -40,6 +31,7 @@ struct		s_list
 
 int			ft_atoi_base(char const *s, char *b);
 int			ft_atoi(char const *s);
+long		ft_atol(char const *s);
 void		ft_bzero(void *s, size_t n);
 void		ft_cat(char **f);
 char		*ft_convert_base(char *n, char *base_from, char *base_to);

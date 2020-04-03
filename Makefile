@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/04/02 16:54:27 by jdufour          ###   ########.fr        #
+#    Updated: 2020/04/03 11:38:27 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME		=	libft.a
 
 SRCS		=	ft_atoi_base.c			\
 				ft_atoi.c				\
+				ft_atol.c				\
 				ft_bzero.c				\
 				ft_cat.c				\
 				ft_convert_base.c		\
