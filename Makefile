@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/04/05 06:36:29 by jdufour          ###   ########.fr        #
+#    Updated: 2020/04/05 07:15:50 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_putnbr_fd.c			\
 				ft_putstr.c				\
 				ft_putstr_fd.c			\
+				ft_reverse_all_bytes.c	\
 				ft_reverse_byte.c		\
 				ft_reverse_each_byte.c	\
 				ft_set_bit.c			\
