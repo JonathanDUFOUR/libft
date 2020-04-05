@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/05 07:17:09 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/05 08:22:03 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ char		*ft_strnew(size_t size);
 char		*ft_strnstr(char *s, const char *to_find, size_t n);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strrev(char *s);
+char		**ft_strsort(char **strs);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_strstr(char const *s, const char *to_find);
 char		*ft_strsub(char const *si, unsigned start, size_t len);
@@ -117,6 +118,7 @@ char		*ft_strtrim(char const *s);
 size_t		ft_substrs_count(const char *s, const char *charset);
 void		ft_swap(int *a, int *b);
 void		ft_swap_bits(uint32_t *ptr, uint32_t idx1, uint32_t idx2);
+void		ft_swap_strs(char **s1, char **s2);
 void		ft_toggle_bit(uint32_t *ptr, uint32_t idx);
 void		ft_toggle_byte(uint32_t *ptr, uint32_t idx);
 void		ft_toggle_nbyte(uint32_t *ptr, uint32_t n);
