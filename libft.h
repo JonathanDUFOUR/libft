@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/05 08:22:03 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/05 09:44:34 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char		*ft_cut_spaces(char *s);
 size_t		ft_file_size(char *f);
 ssize_t		ft_indexof(char c, char *str);
 int			ft_int_size(int n);
+int			*ft_intsort(int *tab, size_t size);
 t_bool		ft_isalnum(int c);
 t_bool		ft_isalpha(int c);
 t_bool		ft_isascii(int c);

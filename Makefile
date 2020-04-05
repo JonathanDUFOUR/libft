@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/04/05 08:12:05 by jdufour          ###   ########.fr        #
+#    Updated: 2020/04/05 09:30:04 by jdufour          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_file_size.c			\
 				ft_indexof.c			\
 				ft_int_size.c			\
+				ft_intsort.c			\
 				ft_isalnum.c			\
 				ft_isalpha.c			\
 				ft_isascii.c			\
