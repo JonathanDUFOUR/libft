@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/04/05 09:44:34 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/30 06:56:45 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int			ft_atoi_base(char const *s, char *b);
 int			ft_atoi(char const *s);
 long		ft_atol(char const *s);
 void		ft_bzero(void *s, size_t n);
+void		*ft_calloc(size_t n, size_t size);
 void		ft_cat(char **f);
 char		*ft_convert_base(char *n, char *base_from, char *base_to);
 char		*ft_cut_spaces(char *s);
@@ -114,9 +115,8 @@ char		*ft_strrev(char *s);
 char		**ft_strsort(char **strs);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_strstr(char const *s, const char *to_find);
-char		*ft_strsub(char const *si, unsigned start, size_t len);
 char		*ft_strtrim(char const *s);
-size_t		ft_substrs_count(const char *s, const char *charset);
+char		*ft_substr(char const *s, unsigned start, size_t len);
 void		ft_swap(int *a, int *b);
 void		ft_swap_bits(uint32_t *ptr, uint32_t idx1, uint32_t idx2);
 void		ft_swap_strs(char **s1, char **s2);

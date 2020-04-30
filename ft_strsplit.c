@@ -6,13 +6,12 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:46 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 02:55:39 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/04/30 06:48:21 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <sys/types.h>
-#include "libft.h"
 
 static char	**populate(char **output, char *ptr, char const *s, char c)
 {
