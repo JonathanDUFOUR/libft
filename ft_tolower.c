@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 04:52:27 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/25 01:58:05 by jdufour          ###   ########.fr       */
+/*   Updated: 2020/06/01 12:27:42 by jdufour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_tolower(int c)
 {
-	return (ft_isupper(c) * ('a' - 'A'));
+	return (c + ft_isupper(c) * ('a' - 'A'));
 }
