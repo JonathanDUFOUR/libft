@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/04/30 06:56:04 by jdufour          ###   ########.fr        #
+#    Updated: 2020/12/24 12:25:57 by jonathan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_convert_base.c		\
 				ft_cut_spaces.c			\
 				ft_file_size.c			\
+				ft_find_next_prime.c	\
 				ft_indexof.c			\
 				ft_int_size.c			\
 				ft_intsort.c			\
@@ -30,6 +31,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_ischarset.c			\
 				ft_isdigit.c			\
 				ft_islower.c			\
+				ft_isprime.c			\
 				ft_isprint.c			\
 				ft_isspace.c			\
 				ft_isupper.c			\
