@@ -3,30 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/21 06:25:59 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/25 18:28:57 by jdufour          ###   ########.fr       */
+/*   Created: 2020/12/29 02:58:50 by jonathan          #+#    #+#             */
+/*   Updated: 2020/12/29 03:23:27 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
-#include "primes.h"
 
-int	ft_sqrt(u_int32_t nb)
+float	ft_sqrt(u_int32_t n)
 {
-	int	i;
+	float	a;
+	int		i;
 
-	if (nb < 4)
-		return (nb == 1);
-	i = PRIME_COUNT - 1;
-	while (g_primes[i] * g_primes[i] > nb)
-		--i;
-	while (i >= 0)
-	{
-		if (nb % (g_primes[i] * g_primes[i]) == 0)
-			return (g_primes[i] * ft_sqrt(nb / (g_primes[i] * g_primes[i])));
-		--i;
-	}
-	return (0);
+	a = n / 2;
+	i = -1;
+	while (++i < 100)
+		a = (a + (n / a)) / 2;
+	return (a);
 }
