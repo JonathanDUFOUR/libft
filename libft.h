@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2020/12/29 03:20:20 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/04 16:36:36 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define TRUE 1
 # define FALSE 0
 
-typedef	char			t_bool;
+typedef	int				t_bool;
 typedef struct s_list 	t_list;
 
 struct		s_list
@@ -98,7 +98,8 @@ char			*ft_strdup(char const *s);
 t_bool			ft_strequ(char const *s1, char const *s2);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned, char *));
-char			*ft_strjoin(char const **strs, char const *link);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_neo_strjoin(char const **strs, char const *link);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
 char			*ft_strmap(char const *s, char (*f)(char));
@@ -118,7 +119,7 @@ char			**ft_strsort(char **strs);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_strstr(char const *s, const char *to_find);
 char			*ft_strtrim(char const *s);
-char			*ft_substr(char const *s, unsigned start, size_t len);
+char			*ft_substr(char const *s, uint32_t start, size_t len);
 void			ft_swap(int *a, int *b);
 void			ft_swap_bits(uint32_t *ptr, uint32_t idx1, uint32_t idx2);
 void			ft_swap_strs(char **s1, char **s2);

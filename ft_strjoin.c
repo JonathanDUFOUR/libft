@@ -3,39 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jonathan <jojo19.duf@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/28 21:39:40 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/28 22:53:32 by jdufour          ###   ########.fr       */
+/*   Created: 2021/03/04 16:36:45 by jonathan          #+#    #+#             */
+/*   Updated: 2021/03/04 16:49:43 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strjoin(char const **strs, char const *link)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char		*output;
-	char const	**cpy;
-	size_t		o_len;
-	size_t		l_len;
+	char	*res;
+	char	*p;
+	size_t	len;
 
-	if (!strs)
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (!(res = malloc((len + 1) * sizeof(char))))
 		return (NULL);
-	if (!*strs || !*(strs + 1))
-		return ((char *)*strs);
-	cpy = strs;
-	l_len = ft_strlen(link);
-	o_len = ft_strlen(*cpy++);
-	while (*cpy)
-		o_len += ft_strlen(*cpy++) + l_len;
-	if (!(output = ft_memalloc(o_len + 1)))
-		return (NULL);
-	while (*strs)
-	{
-		output = ft_strcat(output, *strs++);
-		output = ft_strcat(output, link);
-	}
-	*(output + o_len) = 0;
-	return (output);
+	p = res;
+	while (*s1)
+		*p++ = *s1++;
+	while (*s2)
+		*p++ = *s2++;
+	*p = '\0';
+	return (res);
 }

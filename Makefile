@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2020/12/24 12:25:57 by jonathan         ###   ########.fr        #
+#    Updated: 2021/03/04 16:34:22 by jonathan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_striter.c			\
 				ft_striteri.c			\
 				ft_strjoin.c			\
+				ft_neo_strjoin.c		\
 				ft_strlcat.c			\
 				ft_strlen.c				\
 				ft_strmap.c				\
