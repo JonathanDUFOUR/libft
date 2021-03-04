@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/28 21:39:40 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/04 16:50:08 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/04 22:40:27 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ char	*ft_neo_strjoin(char const **strs, char const *link)
 	o_len = ft_strlen(*cpy++);
 	while (*cpy)
 		o_len += ft_strlen(*cpy++) + l_len;
-	if (!(output = ft_memalloc(o_len + 1)))
+	if (!(output = malloc(o_len + 1)))
 		return (NULL);
+	ft_bzero(output, o_len + 1);
 	while (*strs)
 	{
 		output = ft_strcat(output, *strs++);

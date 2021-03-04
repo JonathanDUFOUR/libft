@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:57 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 19:24:01 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 22:46:10 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(char const *str)
 	int		i;
 
 	len = ft_strlen(str);
-	if (!(output = ft_memalloc((len + 1) * sizeof(char))))
+	if (!(output = malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	i = -1;
 	while (str[++i])

@@ -6,22 +6,23 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:38 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 18:28:51 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 22:34:12 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <sys/types.h>
+#include <inttypes.h>
 #include "libft.h"
 
 char	*ft_itoa_base(int nbr, char *base)
 {
-	char			*output;
-	unsigned int	abs;
-	char			sign;
-	size_t			len;
-	size_t			bs;
-	size_t			i;
+	char		*output;
+	uint32_t	abs;
+	char		sign;
+	size_t		len;
+	size_t		bs;
+	size_t		i;
 
 	if (ft_wrong_base(base))
 		return (0);
@@ -29,9 +30,9 @@ char	*ft_itoa_base(int nbr, char *base)
 	abs = (sign == 'n' ? -nbr : nbr);
 	len = (sign == 'n' ? 2 : 1);
 	bs = ft_strlen(base);
-	while ((unsigned int)ft_power(bs, len) <= abs)
+	while ((uint32_t)ft_power(bs, len) <= abs)
 		len++;
-	if (!(output = (char *) ft_memalloc((len + 1) * sizeof(char))))
+	if (!(output = malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	i = (sign ? 1 : 0);
 	output[len] = 0;

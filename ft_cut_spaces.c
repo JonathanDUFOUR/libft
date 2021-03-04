@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/02 15:42:07 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/02 16:06:07 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 22:31:18 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_cut_spaces(char *s)
 		if (ft_isspace(*s++))
 			++spaces;
 	s = cpy;
-	if (!(output = ft_memalloc((ft_strlen(s) - spaces + 1) * sizeof(char))))
+	if (!(output = malloc((ft_strlen(s) - spaces + 1) * sizeof(char))))
 		return (NULL);
 	cpy = output;
 	while (*s)

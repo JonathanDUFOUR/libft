@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/05 07:23:13 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/05 09:13:29 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 22:51:24 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	**ft_strsort(char **strs)
 	size = 0;
 	while(strs[size])
 		++size;
-	if (!(output = ft_memalloc((size + 1) * sizeof(char *))))
+	if (!(output = malloc((size + 1) * sizeof(char *))))
 		return (NULL);
 	output[size] = NULL;
 	while (size--)

@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/05 09:21:09 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/05 10:10:00 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 22:55:03 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	*ft_intsort(int *tab, size_t size)
 
 	if (!tab)
 		return (NULL);
-	if (!(output = ft_memalloc(size * sizeof(int))))
+	if (!(output = malloc(size * sizeof(int))))
 		return (NULL);
 	i = 0;
 	while (i < size)
