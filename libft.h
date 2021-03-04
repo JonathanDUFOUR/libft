@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/04 16:36:36 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/04 16:54:36 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ char			*ft_strrev(char *s);
 char			**ft_strsort(char **strs);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_strstr(char const *s, const char *to_find);
-char			*ft_strtrim(char const *s);
+char			*ft_strtrim(char const *s, char const *set);
 char			*ft_substr(char const *s, uint32_t start, size_t len);
 void			ft_swap(int *a, int *b);
 void			ft_swap_bits(uint32_t *ptr, uint32_t idx1, uint32_t idx2);

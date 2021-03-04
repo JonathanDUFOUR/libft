@@ -6,20 +6,20 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/28 23:11:11 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/28 23:42:20 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 16:57:49 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s, char const *set)
 {
 	char	*output;
 	size_t	o_len;
 
 	o_len = ft_strlen(s);
-	while (*s && (*s == ' ' || *s == '\n' || *s == '\t'))
+	while (*s && ft_strchr(set, *s))
 	{
 		--o_len;
 		++s;
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s)
 	if (!*s)
 		return ("");
 	s += o_len - 1;
-	while (*s && (*s == ' ' || *s == '\n' || *s == '\t'))
+	while (*s && ft_strchr(set, *s))
 	{
 		--o_len;
 		--s;
