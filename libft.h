@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/04 17:20:47 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/04 18:22:29 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@
 
 typedef	int		t_bool;
 
-typedef struct	s_list
+typedef struct	s_list	t_list;
+
+struct s_list
 {
 	void	*content;
 	size_t	content_size;
 	t_list	*next;
-}				t_list;
+};
 
 int				ft_atoi_base(char const *s, char *b);
 int				ft_atoi(char const *s);
