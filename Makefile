@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/03/04 16:34:22 by jonathan         ###   ########.fr        #
+#    Updated: 2021/03/04 17:00:10 by jonathan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_reverse_byte.c		\
 				ft_reverse_each_byte.c	\
 				ft_set_bit.c			\
+				ft_split.c				\
 				ft_sqrt.c				\
 				ft_strcasecmp.c			\
 				ft_strcaseequ.c			\
@@ -98,7 +99,6 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strrchr.c			\
 				ft_strrev.c				\
 				ft_strsort.c			\
-				ft_strsplit.c			\
 				ft_strstr.c				\
 				ft_strtrim.c			\
 				ft_substr.c				\
