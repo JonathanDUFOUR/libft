@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 23:29:24 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 17:32:59 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:20:01 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 		++i;
 	}
 	dest[dest_len + i] = 0;
-	return dest;
+	return (dest);
 }
-

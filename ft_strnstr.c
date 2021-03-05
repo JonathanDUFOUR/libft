@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 22:11:06 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 22:41:02 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:16:16 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <sys/types.h>
 #include "libft.h"
 
-char    *ft_strnstr(char *str, const char *to_find, size_t n)
+char	*ft_strnstr(char *str, const char *to_find, size_t n)
 {
 	size_t	i;
 	size_t	j;
@@ -27,7 +27,10 @@ char    *ft_strnstr(char *str, const char *to_find, size_t n)
 	while (str[i] && i < n)
 	{
 		j = 0;
-		while ((i + j) < n && str[i + j] && to_find[j] && to_find[j] == str[i + j])
+		while ((i + j) < n &&
+				str[i + j] &&
+				to_find[j] &&
+				to_find[j] == str[i + j])
 			++j;
 		if (!to_find[j])
 			return (str + i);

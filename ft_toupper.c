@@ -6,13 +6,13 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 04:40:38 by jdufour           #+#    #+#             */
-/*   Updated: 2020/06/01 12:26:42 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 23:11:13 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	return (c - ft_islower(c) * ('a' - 'A'));
 }

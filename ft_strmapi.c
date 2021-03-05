@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/26 19:29:08 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 19:47:39 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:25:10 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char    *cpy;
-	char    *ptr;
+	char	*cpy;
+	char	*ptr;
 
 	if ((cpy = ft_strdup(s)))
 	{

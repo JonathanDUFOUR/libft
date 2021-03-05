@@ -6,12 +6,22 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/05 07:23:13 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/04 22:51:24 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/05 00:30:49 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+
+size_t	ft_get_strs_size(char **strs)
+{
+	size_t	size;
+
+	size = 0;
+	while (*strs++)
+		++size;
+	return (size);
+}
 
 char	**ft_strsort(char **strs)
 {
@@ -20,9 +30,7 @@ char	**ft_strsort(char **strs)
 
 	if (!strs)
 		return (NULL);
-	size = 0;
-	while(strs[size])
-		++size;
+	size = ft_get_strs_size(strs);
 	if (!(output = malloc((size + 1) * sizeof(char *))))
 		return (NULL);
 	output[size] = NULL;

@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 07:07:46 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 07:32:45 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:16:53 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((char *) dest)[i] = ((char *) src)[i];
+		((char *)dest)[i] = ((char *)src)[i];
 		++i;
 	}
 	return (dest);

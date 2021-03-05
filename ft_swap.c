@@ -6,11 +6,11 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:28:15 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:28:17 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:09:40 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
 	int	tmp;
 

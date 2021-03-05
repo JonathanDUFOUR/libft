@@ -6,13 +6,13 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 12:08:32 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/03 21:20:07 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:10:36 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <inttypes.h>
 
-void    ft_unset_bit(uint32_t *ptr, uint32_t idx)
+void	ft_unset_bit(uint32_t *ptr, uint32_t idx)
 {
-    *ptr &= ~(1UL << (idx % 32));
+	*ptr &= ~(1UL << (idx % 32));
 }

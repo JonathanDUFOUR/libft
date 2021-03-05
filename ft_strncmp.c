@@ -6,13 +6,13 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 22:44:18 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/27 01:19:57 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:24:28 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 
-int     ft_strncmp(char const *s1, char const *s2, size_t n)
+int	ft_strncmp(char const *s1, char const *s2, size_t n)
 {
 	while (n && s1 && s2 && *s1 && *s1++ == *s2++)
 		--n;

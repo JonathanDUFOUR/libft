@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 22:21:47 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 22:30:42 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/05 00:20:48 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (((char *) s1)[i] != ((char *) s2)[i])
-			break;
+		if (((char *)s1)[i] != ((char *)s2)[i])
+			break ;
 		++i;
 	}
-	return (((char *) s1)[i] - ((char *) s2)[i]);
+	return (((char *)s1)[i] - ((char *)s2)[i]);
 }

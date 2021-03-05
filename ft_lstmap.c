@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/29 03:31:58 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/29 04:30:59 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 23:11:42 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	*ft_del_iferror(t_list *lst)
 	return (NULL);
 }
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*current;
 	t_list	*next;

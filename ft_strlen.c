@@ -6,17 +6,17 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:26 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/21 06:27:30 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/04 23:12:38 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 
-size_t  ft_strlen(register const char *str)
+size_t	ft_strlen(char *str)
 {
-	register char *p;
+	register char	*p;
 
-	p = (char *)str;
+	p = str;
 	while (*p)
 		++p;
 	return (p - str);
