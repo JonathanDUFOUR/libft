@@ -6,15 +6,15 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 12:11:43 by jonathan          #+#    #+#             */
-/*   Updated: 2020/12/24 12:21:03 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/05 18:50:54 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isprime(unsigned int n)
+t_bool	ft_isprime(uint32_t n)
 {
-	unsigned int	i;
+	uint32_t	i;
 
 	if (n < 2)
 		return (FALSE);
