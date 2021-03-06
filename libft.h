@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/06 17:46:02 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/06 21:14:06 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ t_bool					ft_isascii(int c);
 t_bool					ft_ischarset(char c, char const *charset);
 t_bool					ft_isdigit(int c);
 t_bool					ft_islower(int c);
-t_bool					ft_isprime(unsigned int n);
+t_bool					ft_isprime(uint32_t n);
 t_bool					ft_isprint(int c);
 t_bool					ft_isspace(int c);
 t_bool					ft_isupper(int c);
@@ -116,7 +116,7 @@ size_t					ft_strlcat(char *dest, const char *src, size_t size);
 size_t					ft_strlen(const char *str);
 char					*ft_strmap(char const *s, char (*f)(char));
 char					*ft_strmapi(char const *s,
-									char (*f)(unsigned int, char));
+									char (*f)(uint32_t, char));
 int						ft_strncasecmp(char const *s1,
 										char const *s2,
 										size_t n);
