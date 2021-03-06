@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jonathan <jojo19.duf@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/29 01:46:14 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/06 22:41:54 by jonathan         ###   ########.fr       */
+/*   Created: 2021/03/06 22:45:07 by jonathan          #+#    #+#             */
+/*   Updated: 2021/03/06 22:52:02 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *))
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*cpy;
-
-	if (!alst)
-		return ;
-	while ((cpy = *alst))
-	{
-		del(cpy->content);
-		*alst = cpy->next;
-		free(cpy);
-	}
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
