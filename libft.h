@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/06 21:14:06 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/06 22:18:18 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef struct s_list	t_list;
 struct					s_list
 {
 	void	*content;
-	size_t	content_size;
 	t_list	*next;
 };
 
@@ -63,7 +62,8 @@ void					ft_lstdelone(t_list **alst,
 									void (*del)(void *, size_t));
 void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_list					*ft_lstnew(void const *content, size_t content_size);
+t_list					*ft_lstnew(void const *content);
+int						ft_lstsize(t_list *lst);
 void					*ft_memalloc(size_t size);
 void					*ft_memccpy(void *dest,
 									const void *src,

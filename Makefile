@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/03/06 17:45:20 by jonathan         ###   ########.fr        #
+#    Updated: 2021/03/06 22:14:48 by jonathan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_lstiter.c			\
 				ft_lstmap.c				\
 				ft_lstnew.c				\
+				ft_lstsize.c			\
 				ft_memalloc.c			\
 				ft_memccpy.c			\
 				ft_memchr.c				\
