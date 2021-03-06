@@ -6,7 +6,7 @@
 /*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/05 18:56:10 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/06 17:07:05 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,9 @@
 # include <sys/types.h>
 # include <inttypes.h>
 
-# define PRIME_COUNT 4796
 # define BUFF_SIZE 8192
 # define TRUE 1
 # define FALSE 0
-
-enum					e_itoa_base_sizes
-{
-	OS,
-	BS
-};
 
 typedef	int				t_bool;
 typedef struct s_list	t_list;
@@ -38,7 +31,7 @@ struct					s_list
 };
 
 int						ft_atoi_base(char const *s, char *b);
-int						ft_atoi(char const *s);
+int						ft_atoi(char const *s) __attribute__((nonnull));
 long					ft_atol(char const *s);
 void					ft_bzero(void *s, size_t n);
 void					*ft_calloc(size_t n, size_t size);
