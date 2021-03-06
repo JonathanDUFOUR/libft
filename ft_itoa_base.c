@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:38 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/04 23:10:11 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/06 15:46:14 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,38 @@
 #include <inttypes.h>
 #include "libft.h"
 
-char	*ft_itoa_base(int nbr, char *base)
+uint32_t	get_o_len(uint32_t abs, uint32_t b_len, int sign)
+{
+	if (abs < b_len)
+		return (1);
+	return (sign + get_o_len(abs / b_len, b_len, 0) + 1);
+}
+
+char		*ft_itoa_base(int nbr, char *base)
 {
 	char		*output;
+	char		*p;
 	uint32_t	abs;
-	size_t		i;
-	size_t		size[2];
-
+	uint32_t	b_len;
+	uint32_t	o_len;
+	
 	if (ft_wrong_base(base))
-		return (0);
-	abs = (nbr < 0 ? -nbr : nbr);
-	size[OS] = (nbr < 0 ? 2 : 1);
-	size[BS] = ft_strlen(base);
-	while ((uint32_t)ft_power(size[BS], size[OS]) <= abs)
-		++(size[OS]);
-	if (!(output = malloc((size[OS] + 1) * sizeof(char))))
 		return (NULL);
-	i = (nbr < 0 ? 1 : 0);
-	output[size[OS]] = 0;
-	while (--size[OS] >= i)
+	abs = (nbr < 0 ? -nbr : nbr);
+	b_len = ft_strlen(base);
+	o_len = get_o_len(abs, b_len, (nbr < 0));
+	if (!(output = malloc((o_len + 1) * sizeof(char))))
+		return (NULL);
+	p = output + o_len;
+	*p = 0;
+	--p;
+	if (nbr < 0 && --o_len)
+		*output = '-';
+	while (o_len--)
 	{
-		output[size[OS]] = base[abs % (size[BS])];
-		abs /= size[BS];
+		*p = base[abs % b_len];
+		--p;
+		abs /= b_len;
 	}
-	if (nbr < 0)
-		output[0] = '-';
 	return (output);
 }
