@@ -6,7 +6,7 @@
 #    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/03/06 22:50:59 by jonathan         ###   ########.fr        #
+#    Updated: 2021/03/06 23:11:23 by jonathan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_itoa_base.c			\
 				ft_itoa.c				\
 				ft_lstadd.c				\
+				ft_lstclear.c			\
 				ft_lstdel.c				\
 				ft_lstdelone.c			\
 				ft_lstiter.c			\
