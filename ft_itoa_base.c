@@ -6,7 +6,7 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:38 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/06 15:46:14 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/06 21:42:09 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char		*ft_itoa_base(int nbr, char *base)
 	uint32_t	b_len;
 	uint32_t	o_len;
 	
-	if (ft_wrong_base(base))
+	if (!base || ft_wrong_base(base))
 		return (NULL);
 	abs = (nbr < 0 ? -nbr : nbr);
 	b_len = ft_strlen(base);
