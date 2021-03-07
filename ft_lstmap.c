@@ -6,46 +6,40 @@
 /*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/29 03:31:58 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/06 23:44:45 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/07 01:04:51 by jonathan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static void	*ft_del_iferror(t_list *lst)
+static t_list	*del_iferror(t_list **res, void (*del)(void *))
 {
-	t_list	*cpy;
-
-	cpy = lst;
-	while (cpy)
-	{
-		cpy = cpy->next;
-		free(lst);
-		lst = cpy;
-	}
+	ft_lstclear(res, del);
 	return (NULL);
 }
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+							void (*del)(void *))
 {
-	t_list	*current;
-	t_list	*next;
 	t_list	*res;
+	t_list	*new;
+	int		size;
 
-	if (!f)
+	if (!f || !lst)
 		return (NULL);
-	res = NULL;
-	while (lst)
+	size = ft_lstsize(lst);
+	if (size--)
 	{
-		if (!(next = f(lst)))
-			return (ft_del_iferror(res));
-		next->next = 0;
-		if (!res)
-			res = next;
-		else
-			current->next = next;
-		current = next;
+		if (!(res = ft_lstnew(f(lst->content))))
+			return (del_iferror(&res, del));
+		lst = lst->next;
+	}
+	while (size--)
+	{
+		if (!(new = ft_lstnew(f(lst->content))))
+			return (del_iferror(&res, del));
+		ft_lstadd_back(&res, new);
 		lst = lst->next;
 	}
 	return (res);
