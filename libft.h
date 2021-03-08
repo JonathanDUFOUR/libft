@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/07 01:04:10 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/08 01:10:00 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdbool.h>
 # include <sys/types.h>
 # include <inttypes.h>
 
@@ -20,7 +21,7 @@
 # define TRUE 1
 # define FALSE 0
 
-typedef	int				t_bool;
+typedef	int 			t_bool;
 typedef struct s_list	t_list;
 
 struct					s_list
@@ -47,7 +48,7 @@ int						*ft_intsort(int *tab, size_t size);
 t_bool					ft_isalnum(int c);
 t_bool					ft_isalpha(int c);
 t_bool					ft_isascii(int c);
-t_bool					ft_ischarset(char c, char const *charset);
+bool					ft_ischarset(char c, char const *charset);
 t_bool					ft_isdigit(int c);
 t_bool					ft_islower(int c);
 t_bool					ft_isprime(uint32_t n);
