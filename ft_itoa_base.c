@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:38 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/06 21:42:09 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:51:47 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,30 +22,38 @@ uint32_t	get_o_len(uint32_t abs, uint32_t b_len, int sign)
 	return (sign + get_o_len(abs / b_len, b_len, 0) + 1);
 }
 
-char		*ft_itoa_base(int nbr, char *base)
+void	init_abs(uint32_t *abs, int nbr)
+{
+	if (nbr < 0)
+		*abs = -nbr;
+	else
+		*abs = nbr;
+}
+
+char	*ft_itoa_base(int nbr, char *base)
 {
 	char		*output;
 	char		*p;
 	uint32_t	abs;
 	uint32_t	b_len;
 	uint32_t	o_len;
-	
+
 	if (!base || ft_wrong_base(base))
 		return (NULL);
-	abs = (nbr < 0 ? -nbr : nbr);
+	init_abs(&abs, nbr);
 	b_len = ft_strlen(base);
 	o_len = get_o_len(abs, b_len, (nbr < 0));
-	if (!(output = malloc((o_len + 1) * sizeof(char))))
+	output = malloc((o_len + 1) * sizeof(char));
+	if (!output)
 		return (NULL);
 	p = output + o_len;
 	*p = 0;
-	--p;
 	if (nbr < 0 && --o_len)
 		*output = '-';
 	while (o_len--)
 	{
-		*p = base[abs % b_len];
 		--p;
+		*p = base[abs % b_len];
 		abs /= b_len;
 	}
 	return (output);

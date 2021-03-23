@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 22:11:06 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:16:16 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:34:46 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ char	*ft_strnstr(char *str, const char *to_find, size_t n)
 	while (str[i] && i < n)
 	{
 		j = 0;
-		while ((i + j) < n &&
-				str[i + j] &&
-				to_find[j] &&
-				to_find[j] == str[i + j])
+		while ((i + j) < n
+			&& str[i + j]
+			&& to_find[j]
+			&& to_find[j] == str[i + j])
 			++j;
 		if (!to_find[j])
 			return (str + i);

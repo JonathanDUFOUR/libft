@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/26 19:29:08 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:25:10 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:40:16 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*cpy;
 	char	*ptr;
 
-	if ((cpy = ft_strdup(s)))
+	cpy = ft_strdup(s);
+	if (cpy)
 	{
 		ptr = cpy - 1;
 		while (*++ptr)

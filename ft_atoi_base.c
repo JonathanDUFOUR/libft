@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:21:19 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/06 15:50:34 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 19:23:41 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_atoi_base(char const *s, char *b)
 {
-	int res;
+	int	res;
 	int	sign;
 	int	b_size;
 

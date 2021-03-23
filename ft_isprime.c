@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprime.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 12:11:43 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/06 18:36:59 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 19:25:07 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isprime(uint32_t n)
+bool	ft_isprime(uint32_t n)
 {
 	uint32_t	i;
 
 	if (n == 2 || n == 3 || n == 5 || n == 7 || n == 11)
-		return (TRUE);
+		return (true);
 	if (n < 2 || !(n % 2) || !(n % 3) || !(n % 5) || !(n % 7) || !(n % 11))
-		return (FALSE);
+		return (false);
 	i = 13;
 	while (i < (n / 10))
 	{
 		if (!(n % i))
-			return (FALSE);
+			return (false);
 		i += 2;
 	}
-	return (TRUE);
+	return (true);
 }

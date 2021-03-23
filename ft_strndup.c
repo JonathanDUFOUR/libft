@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 17:04:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/01 17:08:54 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 17:57:32 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strndup(char const *s, size_t n)
 {
 	char	*output;
 
-	if ((output = malloc(n * sizeof(char))))
+	output = malloc(n * sizeof(char));
+	if (output)
 		ft_memcpy(output, s, n);
 	return (output);
 }

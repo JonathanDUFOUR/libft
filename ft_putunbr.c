@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathan <jojo19.duf@gmail.com>            +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:33:23 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/06 17:39:53 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 19:10:10 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putunbr(unsigned n)
+void	ft_putunbr(unsigned int n)
 {
 	char	d;
 

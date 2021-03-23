@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/28 23:11:11 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/04 16:57:49 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:27:38 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ char	*ft_strtrim(char const *s, char const *set)
 		--s;
 	}
 	s -= o_len - 1;
-	if (!(output = ft_memalloc(o_len + 1)))
+	output = malloc((o_len + 1) * sizeof(char));
+	if (!output)
 		return (NULL);
 	*(output + o_len) = 0;
 	ft_memcpy(output, s, o_len);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_file_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:22:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 00:00:29 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 19:19:51 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 size_t	ft_file_size(char *f)
 {
-	struct stat st;
+	struct stat	st;
 
-	return (!stat(f, &st) ? st.st_size : -1);
+	if (!stat(f, &st))
+		return (st.st_size);
+	else
+		return (-1);
 }

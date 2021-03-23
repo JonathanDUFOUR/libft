@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cut_spaces.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/02 15:42:07 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/04 22:31:18 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:55:00 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ char	*ft_cut_spaces(char *s)
 		if (ft_isspace(*s++))
 			++spaces;
 	s = cpy;
-	if (!(output = malloc((ft_strlen(s) - spaces + 1) * sizeof(char))))
+	output = malloc((ft_strlen(s) - spaces + 1) * sizeof(char));
+	if (!output)
 		return (NULL);
 	cpy = output;
 	while (*s)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:46 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:31:18 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:25:50 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	**populate(char **output, char *ptr, char const *s, char c)
 	return (output);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**output;
 	size_t	size;
@@ -46,7 +46,8 @@ char		**ft_split(char const *s, char c)
 			++size;
 		++len;
 	}
-	if (!(output = malloc(sizeof(char *) * (size + 1) + len + 1)))
+	output = malloc(sizeof(char *) * (size + 1) + len + 1);
+	if (!output)
 		return (NULL);
 	output[size] = NULL;
 	return (populate(output, (char *)(output + size + 1), s, c));

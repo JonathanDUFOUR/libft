@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:06 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/02 14:30:20 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 19:24:19 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(int c)
+#include "libft.h"
+
+bool	ft_isspace(int c)
 {
 	return ((c >= 8 && c <= 13) || c == 32);
 }

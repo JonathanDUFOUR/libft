@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 03:42:37 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/02 14:14:06 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 19:26:48 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isascii(int c)
+bool	ft_isascii(int c)
 {
 	return (!(c >> 7));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:28:03 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/27 06:30:29 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 17:38:17 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 
 char	*ft_strstr(char const *s, char const *tf)
 {
-	size_t const	tf_l = ft_strlen(tf ? tf : "");
-	size_t const	s_l = ft_strlen(s ? s : "");
+	size_t const	tf_l = ft_strlen(tf);
+	size_t const	s_l = ft_strlen(s);
 	size_t			tab[256];
 	size_t			i;
 
-	if ((i = 0) || !s || !tf || tf_l > s_l || !tf_l)
+	i = 0;
+	if (!s || !tf || tf_l > s_l || !tf_l)
 		return ((char *)(!tf_l * (uintptr_t)s));
 	while (i < 256)
 		tab[i++] = tf_l;

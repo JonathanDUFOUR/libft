@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 02:03:18 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/24 02:04:01 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 18:01:25 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_islower(int c)
+#include "libft.h"
+
+bool	ft_islower(int c)
 {
-	return (c >= 'a' && c <= 'z' ? 1 : 0);
+	if (c >= 'a' && c <= 'z')
+		return (true);
+	else
+		return (false);
 }

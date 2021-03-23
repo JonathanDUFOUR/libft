@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:26 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/04 23:12:38 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:33:52 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(char const *s)
 {
-	register char	*p;
+	register char const	*p = s;
 
-	p = str;
-	while (*p)
+	while (p && *p)
 		++p;
-	return (p - str);
+	return (p - s);
 }

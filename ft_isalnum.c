@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 02:11:02 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/02 14:10:38 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 19:21:16 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isalnum(int c)
+bool	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c) ? TRUE : FALSE);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (true);
+	else
+		return (false);
 }

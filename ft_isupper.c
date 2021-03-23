@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 02:04:19 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/24 02:04:53 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 18:55:05 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isupper(int c)
+#include "libft.h"
+
+bool	ft_isupper(int c)
 {
-	return (c >= 'A' && c <= 'Z' ? 1 : 0);
+	if (c >= 'A' && c <= 'Z')
+		return (true);
+	else
+		return (false);
 }

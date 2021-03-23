@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/26 17:47:35 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/26 19:21:20 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/23 18:02:00 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*cpy;
 	char	*ptr;
 
-	if ((cpy = ft_strdup(s)))
+	cpy = ft_strdup(s);
+	if (cpy)
 	{
 		ptr = cpy - 1;
 		while (*++ptr)

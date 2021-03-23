@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 04:07:55 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/06 21:13:14 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 19:24:38 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+bool	ft_isprint(int c)
 {
 	return (c <= '~' && c >= ' ');
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_intsort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/05 09:21:09 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/04 22:55:03 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:36:09 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ int	*ft_intsort(int *tab, size_t size)
 	int		*output;
 	size_t	i;
 
-	if (!tab)
-		return (NULL);
-	if (!(output = malloc(size * sizeof(int))))
+	output = malloc(size * sizeof(int));
+	if (!tab || !output)
 		return (NULL);
 	i = 0;
 	while (i < size)

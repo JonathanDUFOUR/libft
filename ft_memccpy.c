@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 07:04:31 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:22:39 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/23 19:04:31 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	d_cpy = (char *)dest;
 	s_cpy = (char *)src;
 	while (n--)
-		if ((*d_cpy++ = *s_cpy++) == c)
+	{
+		*d_cpy++ = *s_cpy++;
+		if (*d_cpy == c)
 			return (d_cpy);
+	}
 	return (NULL);
 }
