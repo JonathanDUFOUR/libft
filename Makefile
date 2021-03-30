@@ -3,14 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jojo <marvin@42.fr>                        +#+  +:+       +#+         #
+#    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/03/07 14:24:45 by jonathan         ###   ########.fr        #
+#    Updated: 2021/03/30 16:37:55 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
+CC			=	gcc -c -o
+LINKER		=	gcc -o
+AR_RC		=	ar rcs
+RM			=	rm -rf
 
 SRCS		=	ft_atoi_base.c			\
 				ft_atoi.c				\
@@ -121,32 +125,35 @@ SRCS		=	ft_atoi_base.c			\
 				ft_unset_bit.c			\
 				ft_wrong_base.c
 
-OBJECTS		:=	${SRCS:.c=.o}
+OBJS		:=	${SRCS:.c=.o}
 
 CFLAGS		=	-Wall -Wextra -Werror
+
+SOFLAGS		=	-fPIC
 
 ifeq (${DEBUG}, TRUE)
 	CFLAGS	+= -g
 	MKFLAGS	+= DEBUG=TRUE
 endif
 
-CC			=	gcc
-
-AR_RC		=	ar rcs
-
-RM			=	rm -rf
-
-
-${NAME}:	${OBJECTS}
-	${AR_RC} $@ $^
+ifeq (${MOD}, DYNAMIC)
+	CFLAGS	+= -fPIC
+	MKFLAGS	+= MOD=DYNAMIC
+endif
 
 all:	${NAME}
 
+${NAME}:	${OBJS}
+	${AR_RC} $@ $^
+
+so:	${OBJS}
+	${LINKER} libft.so -shared ${OBJS}
+
 %.o:	%.c
-	${CC} -c ${CFLAGS} -o $@ $<
+	${CC} $@ ${CFLAGS} $^
 
 clean:
-	@${RM} ${OBJECTS}
+	@${RM} ${OBJS}
 
 fclean: clean
 	@${RM} ${NAME}
