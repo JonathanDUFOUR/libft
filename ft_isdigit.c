@@ -6,16 +6,16 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:22:54 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 19:09:32 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/03/30 20:35:56 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (true);
+		return (TRUE);
 	else
-		return (false);
+		return (FALSE);
 }

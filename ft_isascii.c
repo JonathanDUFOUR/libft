@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 03:42:37 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 19:26:48 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/03/30 20:51:57 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (!(c >> 7));
 }

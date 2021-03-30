@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:28:43 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/07 19:48:59 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/03/30 20:35:56 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_wrong_base(char const *base)
+int	ft_wrong_base(char const *base)
 {
 	size_t	i;
 	size_t	j;

@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:06 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 19:24:19 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/03/30 20:28:05 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	return ((c >= 8 && c <= 13) || c == 32);
 }

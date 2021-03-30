@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 07:04:31 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 19:04:31 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/03/30 19:38:33 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	*d_cpy;
-	char	*s_cpy;
+	unsigned char	*d_cpy;
+	unsigned char	*s_cpy;
 
-	d_cpy = (char *)dest;
-	s_cpy = (char *)src;
+	d_cpy = (unsigned char *)dest;
+	s_cpy = (unsigned char *)src;
 	while (n--)
 	{
 		*d_cpy++ = *s_cpy++;

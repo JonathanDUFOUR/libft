@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcaseequ.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/28 06:46:06 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/02 14:26:19 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/03/30 20:35:56 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_strcaseequ(char const *s1, char const *s2)
+int	ft_strcaseequ(char const *s1, char const *s2)
 {
 	if (s1 == s2)
 		return (TRUE);
