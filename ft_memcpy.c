@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:57:51 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:16:31 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/30 23:22:18 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
+#include <string.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	while (n--)
-		((char *)dest)[n] = ((char *)src)[n];
-	return (dest);
+	if (dst != src)
+		while (n--)
+			((char *)dst)[n] = ((char *)src)[n];
+	return (dst);
 }

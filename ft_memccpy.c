@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 07:04:31 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/30 19:38:33 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/03/30 23:28:49 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	s_cpy = (unsigned char *)src;
 	while (n--)
 	{
-		*d_cpy++ = *s_cpy++;
-		if (*d_cpy == c)
+		*d_cpy++ = *s_cpy;
+		if (*s_cpy++ == (unsigned char)c)
 			return (d_cpy);
 	}
 	return (NULL);

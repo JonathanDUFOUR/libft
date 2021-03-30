@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 22:21:47 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:20:48 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/03/30 23:45:04 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char const	*s1_cpy = (unsigned char *)s1;
+	unsigned char const	*s2_cpy = (unsigned char *)s2;
 
-	if (!n)
+	if (!n || s1 == s2)
 		return (0);
-	i = 0;
-	while (i < n)
+	while (n--)
 	{
-		if (((char *)s1)[i] != ((char *)s2)[i])
-			break ;
-		++i;
+		if (*s1_cpy != *s2_cpy)
+			return (*s1_cpy - *s2_cpy);
+		++s1_cpy;
+		++s2_cpy;
 	}
-	return (((char *)s1)[i] - ((char *)s2)[i]);
+	return (0);
 }

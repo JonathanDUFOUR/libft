@@ -6,14 +6,14 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/03/30 20:35:56 by jodufour         ###   ########.fr        #
+#    Updated: 2021/03/31 00:57:18 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
+SHARED		=	libft.so
 CC			=	gcc -c -o
-LINKER		=	gcc -o
-AR_RC		=	ar rcs
+LINKER		=	ar rcs
 RM			=	rm -rf
 
 SRCS		=	ft_atoi_base.c			\
@@ -126,38 +126,43 @@ SRCS		=	ft_atoi_base.c			\
 				ft_wrong_base.c
 
 OBJS		:=	${SRCS:.c=.o}
+DEPS		:=	${OBJS:.o=.d}
 
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -MMD
 
-SOFLAGS		=	-fPIC
+LDFLAGS		=
 
 ifeq (${DEBUG}, TRUE)
 	CFLAGS	+= -g
-	MKFLAGS	+= DEBUG=TRUE
 endif
 
-ifeq (${MOD}, DYNAMIC)
-	CFLAGS	+= -fPIC
-	MKFLAGS	+= MOD=DYNAMIC
-endif
+${NAME}:	${OBJS}
+	${LINKER} $@ ${LDFLAGS} $<
 
 all:	${NAME}
 
-${NAME}:	${OBJS}
-	${AR_RC} $@ $^
+-include ${DEPS}
 
-so:	${OBJS}
-	${LINKER} libft.so -shared ${OBJS}
+${SHARED}:	CFLAGS	+= -fPIC
+${SHARED}:	LDFLAGS += -shared
+${SHARED}:	LINKER = gcc -o
+${SHARED}:	${OBJS}
+	${LINKER} $@ ${LDFLAGS} $<
+
+so:	${SHARED}
 
 %.o:	%.c
-	${CC} $@ ${CFLAGS} $^
+	${CC} $@ ${CFLAGS} $<
 
 clean:
 	@${RM} ${OBJS}
+	@${RM} ${DEPS}
 
-fclean: clean
-	@${RM} ${NAME}
+fclean:
+	@${RM} ${OBJS}
+	@${RM} ${DEPS}
+	@${RM} ${NAME} ${SHARED}
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re so
