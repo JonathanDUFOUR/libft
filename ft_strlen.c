@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:26 by jdufour           #+#    #+#             */
-/*   Updated: 2021/04/06 18:51:02 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/04/06 19:11:46 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 size_t	ft_strlen(char const *s)
 {
 	register char const	*p = s;
+
 	while (*p)
 		++p;
 	return (p - s);

@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/04/06 18:07:24 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/04/06 19:48:10 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void					ft_set_bit(uint32_t *ptr, uint32_t idx);
 float					ft_sqrt(u_int32_t n);
 char					**ft_split(char const *s, char c);
 int						ft_strcasecmp(char const *s1, char const *s2);
-int					ft_strcaseequ(char const *s1, char const *s2);
+int						ft_strcaseequ(char const *s1, char const *s2);
 char					*ft_strcat(char *dest, const char *src);
 char					*ft_strchr(const char *s, int c);
 void					ft_strclr(char *s);
@@ -109,7 +109,7 @@ int						ft_strcmp(char const *s1, char const *s2);
 char					*ft_strcpy(char *dest, const char *src);
 void					ft_strdel(char **as);
 char					*ft_strdup(char const *s);
-int					ft_strequ(char const *s1, char const *s2);
+int						ft_strequ(char const *s1, char const *s2);
 void					ft_striter(char *s, void (*f)(char *));
 void					ft_striteri(char *s, void (*f)(unsigned, char *));
 char					*ft_strjoin(char const *s1, char const *s2);
@@ -123,14 +123,14 @@ char					*ft_strmapi(char const *s,
 int						ft_strncasecmp(char const *s1,
 							char const *s2,
 							size_t n);
-int					ft_strncaseequ(char const *s1,
+int						ft_strncaseequ(char const *s1,
 							char const *s2,
 							size_t n);
 char					*ft_strncat(char *dest, const char *src, size_t n);
 int						ft_strncmp(char const *s1, char const *s2, size_t n);
 char					*ft_strncpy(char *dest, const char *src, size_t n);
 char					*ft_strndup(char const *s, size_t n);
-int					ft_strnequ(char const *s1, char const *s2);
+int						ft_strnequ(char const *s1, char const *s2);
 char					*ft_strnew(size_t size);
 char					*ft_strnstr(char *s, const char *to_find, size_t n);
 char					*ft_strrchr(const char *s, int c);
@@ -152,6 +152,6 @@ int						ft_toupper(int c);
 int						*ft_ultimate_tolower(int *c);
 int						*ft_ultimate_toupper(int *c);
 void					ft_unset_bit(uint32_t *ptr, uint32_t idx);
-int					ft_wrong_base(const char *b);
+int						ft_wrong_base(const char *b);
 
 #endif
