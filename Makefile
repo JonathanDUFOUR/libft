@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/03/31 00:57:18 by jodufour         ###   ########.fr        #
+#    Updated: 2021/04/06 18:07:43 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_strjoin.c			\
 				ft_neo_strjoin.c		\
 				ft_strlcat.c			\
+				ft_strlcpy.c			\
 				ft_strlen.c				\
 				ft_strmap.c				\
 				ft_strmapi.c			\
@@ -137,7 +138,7 @@ ifeq (${DEBUG}, TRUE)
 endif
 
 ${NAME}:	${OBJS}
-	${LINKER} $@ ${LDFLAGS} $<
+	${LINKER} $@ ${LDFLAGS} $^
 
 all:	${NAME}
 
@@ -147,7 +148,7 @@ ${SHARED}:	CFLAGS	+= -fPIC
 ${SHARED}:	LDFLAGS += -shared
 ${SHARED}:	LINKER = gcc -o
 ${SHARED}:	${OBJS}
-	${LINKER} $@ ${LDFLAGS} $<
+	${LINKER} $@ ${LDFLAGS} $^
 
 so:	${SHARED}
 

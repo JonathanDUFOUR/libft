@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/31 00:44:58 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/04/06 18:07:24 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ void					ft_striteri(char *s, void (*f)(unsigned, char *));
 char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_neo_strjoin(char const **strs, char const *link);
 size_t					ft_strlcat(char *dest, const char *src, size_t size);
+size_t					ft_strlcpy(char *dst, const char *src, size_t size);
 size_t					ft_strlen(const char *str);
 char					*ft_strmap(char const *s, char (*f)(char));
 char					*ft_strmapi(char const *s,
