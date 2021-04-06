@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 18:05:39 by jodufour          #+#    #+#             */
-/*   Updated: 2021/04/06 19:05:18 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/04/06 19:08:17 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (!size)
 		return (src_len);
 	while (--size && *src)
-	{
 		*dst++ = *src++;
-	}
 	*dst = 0;
 	return (src_len);
 }
