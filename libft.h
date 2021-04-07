@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/04/07 04:05:13 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/04/07 17:56:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void					ft_padded_putnbr_base(u_int32_t n,
 							const char *b,
 							u_int8_t l);
 int						ft_power(int n, int p);
-void					ft_print_bits(u_int32_t nbr, size_t n);
+void					ft_putbyte(uint8_t byte);
 void					ft_putchar(char c);
 void					ft_putchar_fd(char c, int fd);
 void					ft_putendl(char const *s);

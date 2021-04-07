@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_bits.c                                    :+:      :+:    :+:   */
+/*   ft_putbyte.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 03:01:12 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/02 13:46:49 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/04/07 18:09:07 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <inttypes.h>
+#include <unistd.h>
 
-void	ft_print_bits(unsigned nbr, size_t n)
+void	ft_putbyte(uint8_t byte)
 {
-	while (n--)
+	int	i;
+
+	i = 8;
+	while (--i >= 0)
 	{
-		ft_padded_putnbr_base((nbr >> 8 * n) & 0xFF, "01", 8);
-		if (n)
-			ft_putchar(' ');
+		if ((byte >> i) & 1)
+			write(1, "1", 1);
+		else
+			write(1, "0", 1);
 	}
 }
