@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/25 18:58:19 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/25 19:01:48 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/04/07 04:06:44 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 void	ft_putendl(char const *s)
 {
-	write(1, s, ft_strlen(s));
-	write(1, "\n", 1);
+	if (s)
+	{
+		write(1, s, ft_strlen(s));
+		write(1, "\n", 1);
+	}
 }

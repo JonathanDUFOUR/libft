@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 05:02:47 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/24 05:12:46 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/04/07 03:49:51 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return (ft_memalloc(size));
+	return (ft_memalloc(size + 1));
 }

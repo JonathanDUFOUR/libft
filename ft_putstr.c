@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:25:26 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/25 18:57:28 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/04/07 04:07:17 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void	ft_putstr(char const *str)
+void	ft_putstr(char const *s)
 {
-	write(1, str, ft_strlen(str));
+	if (s)
+		write(1, s, ft_strlen(s));
 }
