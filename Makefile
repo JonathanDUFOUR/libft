@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/04/07 17:59:42 by jodufour         ###   ########.fr        #
+#    Updated: 2021/04/07 18:31:25 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_padded_putnbr_base.c	\
 				ft_power.c				\
 				ft_putbyte.c			\
+				ft_putbytes.c			\
 				ft_putchar.c			\
 				ft_putchar_fd.c			\
 				ft_putendl.c			\
