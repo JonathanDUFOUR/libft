@@ -6,11 +6,10 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 11:42:51 by jdufour           #+#    #+#             */
-/*   Updated: 2021/04/10 13:00:40 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:55:55 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <inttypes.h>
 #include <stdlib.h>
 #include <sys/types.h>
 
