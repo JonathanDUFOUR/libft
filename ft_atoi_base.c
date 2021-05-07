@@ -6,14 +6,14 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:21:19 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 19:23:41 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/07 22:22:02 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include "libft.h"
 
-int	ft_atoi_base(char const *s, char *b)
+int	ft_atoi_base(char const *s, char const *b)
 {
 	int	res;
 	int	sign;

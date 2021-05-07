@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:38 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 17:51:47 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/07 22:21:25 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	init_abs(uint32_t *abs, int nbr)
 		*abs = nbr;
 }
 
-char	*ft_itoa_base(int nbr, char *base)
+char	*ft_itoa_base(int nbr, char const *base)
 {
 	char		*output;
 	char		*p;

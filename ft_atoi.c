@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:21:03 by jdufour           #+#    #+#             */
-/*   Updated: 2021/04/06 19:45:48 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/07 22:28:02 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char const *s)
+int32_t	ft_atoi(char const *s)
 {
 	int	res;
 	int	sign;

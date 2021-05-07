@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 11:34:54 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/03 11:39:03 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/05/07 22:28:13 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_atol(char const *s)
+int64_t	ft_atol(char const *s)
 {
 	long	res;
 	int		sign;

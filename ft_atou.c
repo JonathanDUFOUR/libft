@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 21:59:08 by jodufour          #+#    #+#             */
-/*   Updated: 2021/05/07 22:02:32 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/07 22:28:26 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_atou(char const *s)
+uint32_t	ft_atou(char const *s)
 {
 	unsigned int	output;
 
