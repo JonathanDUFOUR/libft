@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/04/10 13:00:35 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/07 22:07:12 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ struct					s_list
 int						ft_atoi_base(char const *s, char *b);
 int						ft_atoi(char const *s) __attribute__((nonnull));
 long					ft_atol(char const *s);
+unsigned int			ft_atou(char const *s);
+unsigned long			ft_atoul(char const *s);
 void					ft_bzero(void *s, size_t n);
 void					*ft_calloc(size_t n, size_t size);
 void					ft_cat(char **f);

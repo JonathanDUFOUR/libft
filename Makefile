@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/04/28 01:38:31 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/07 22:07:24 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ RM			=	rm -rf
 SRCS		=	ft_atoi_base.c			\
 				ft_atoi.c				\
 				ft_atol.c				\
+				ft_atou.c				\
+				ft_atoul.c				\
 				ft_bzero.c				\
 				ft_calloc.c				\
 				ft_cat.c				\
