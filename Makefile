@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/05/09 05:01:25 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/09 05:35:42 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,6 +128,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_ultimate_tolower.c	\
 				ft_ultimate_toupper.c	\
 				ft_unset_bit.c			\
+				ft_utoa.c				\
 				ft_wrong_base.c
 
 OBJS		:=	${SRCS:.c=.o}
