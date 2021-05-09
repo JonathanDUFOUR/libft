@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/07 22:29:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/09 05:01:12 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t n, size_t size);
 void		ft_cat(char **f);
 char		*ft_convert_base(char const *n, char const *bf, char const *bt);
+char		*ft_ctoa(char const c);
 char		*ft_cut_spaces(char *s);
 size_t		ft_file_size(char *f);
 uint32_t	ft_find_next_prime(int n);

@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/05/07 22:07:24 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/09 05:01:25 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_calloc.c				\
 				ft_cat.c				\
 				ft_convert_base.c		\
+				ft_ctoa.c				\
 				ft_cut_spaces.c			\
 				ft_file_size.c			\
 				ft_find_next_prime.c	\
