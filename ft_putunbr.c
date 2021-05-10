@@ -6,18 +6,19 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:33:23 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/23 19:10:10 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:50:10 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
+#include <stdint.h>
 
-void	ft_putunbr(unsigned int n)
+void	ft_putunbr(uint32_t n)
 {
 	char	d;
 
 	if (n > 9)
 		ft_putunbr(n / 10);
 	d = n % 10 + '0';
-	ft_putchar(d);
+	write(1, &d, 1);
 }

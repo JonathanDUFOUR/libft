@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:46 by jdufour           #+#    #+#             */
-/*   Updated: 2021/04/07 03:18:31 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:52:54 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,10 @@ char	**ft_split(char const *s, char c)
 **	N malloc(s) version
 */
 
-static unsigned int	words_count(char const *s, char c)
+static uint32_t	words_count(char const *s, char c)
 {
-	unsigned int	count;
-	int				new_word;
+	uint32_t	count;
+	int			new_word;
 
 	count = 0;
 	new_word = 1;
@@ -96,10 +96,10 @@ static size_t	word_len(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char			**output;
-	char			**p;
-	unsigned int	count;
-	size_t			w_len;
+	char		**output;
+	char		**p;
+	uint32_t	count;
+	size_t		w_len;
 
 	if (!s)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 21:59:08 by jodufour          #+#    #+#             */
-/*   Updated: 2021/05/07 22:28:26 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:26:57 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 uint32_t	ft_atou(char const *s)
 {
-	unsigned int	output;
+	uint32_t	output;
 
 	output = 0;
 	while (ft_isspace(*s))

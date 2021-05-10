@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/29 03:31:58 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 19:08:25 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:37:12 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ static t_list	*del_iferror(t_list **res, void (*del)(void *))
 	return (NULL);
 }
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
-							void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*res;
 	t_list	*new;

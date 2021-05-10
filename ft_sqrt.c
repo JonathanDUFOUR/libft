@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 02:58:50 by jonathan          #+#    #+#             */
-/*   Updated: 2020/12/29 03:23:27 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:53:15 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
+#include <stdint.h>
 
-float	ft_sqrt(u_int32_t n)
+float	ft_sqrt(uint32_t n)
 {
 	float	a;
 	int		i;

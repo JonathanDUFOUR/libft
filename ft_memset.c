@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:37:54 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:24:00 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:40:01 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdint.h>
 #include <sys/types.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
 	while (n)
-		((unsigned char *)s)[--n] = c;
+		((uint8_t *)s)[--n] = c;
 	return (s);
 }

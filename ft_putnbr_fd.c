@@ -6,16 +6,17 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/26 02:19:11 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 18:40:48 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:45:02 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdint.h>
 #include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	abs;
-	char			d;
+	uint32_t	abs;
+	char		d;
 
 	abs = n;
 	if (n < 0)

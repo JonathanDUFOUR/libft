@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:57 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 17:55:51 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 02:15:09 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 char	*ft_strdup(char const *str)
 {
 	char	*output;
-	int		len;
-	int		i;
+	char	*p;
+	size_t	len;
 
 	len = ft_strlen(str);
 	output = malloc((len + 1) * sizeof(char));
 	if (!output)
 		return (NULL);
-	i = -1;
-	while (str[++i])
-		output[i] = str[i];
-	output[i] = 0;
+	p = output;
+	while (*str)
+		*p++ = *str++;
+	*p = 0;
 	return (output);
 }

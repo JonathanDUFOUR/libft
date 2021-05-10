@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 11:34:54 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/07 22:28:13 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:27:09 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int64_t	ft_atol(char const *s)
 {
-	long	res;
+	int64_t	res;
 	int		sign;
 
 	res = 0;

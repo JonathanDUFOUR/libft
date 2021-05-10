@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:45 by jdufour           #+#    #+#             */
-/*   Updated: 2020/03/22 17:31:09 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/05/10 01:59:17 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, const char *src)
 {
-	int	i;
+	char	*p;
 
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = 0;
+	p = dest;
+	while (*src)
+		*p++ = *src++;
+	*p = 0;
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/09 05:38:26 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:42:37 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char		*ft_cut_spaces(char *s);
 size_t		ft_file_size(char *f);
 uint32_t	ft_find_next_prime(int n);
 ssize_t		ft_indexof(char c, char const *str);
-int			ft_int_size(int n);
+uint32_t	ft_int_size(int n);
 int			*ft_intsort(int *tab, size_t size);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
@@ -75,7 +75,7 @@ void		ft_memdel(void **ap);
 void		*ft_memmove(void *dest, void const *src, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
 void		ft_padded_putnbr_base(u_int32_t n, char const *b, u_int8_t l);
-int			ft_power(int n, int p);
+int			ft_power(int n, uint32_t pow);
 void		ft_putbyte(uint8_t byte);
 void		ft_putbytes(void *addr, size_t size);
 void		ft_putchar(char c);
@@ -142,6 +142,7 @@ size_t		ft_uint_size(uint32_t n);
 int			*ft_ultimate_tolower(int *c);
 int			*ft_ultimate_toupper(int *c);
 void		ft_unset_bit(uint32_t *ptr, uint32_t idx);
+char		*ft_utoa_base(uint32_t nbr, char const *base);
 char		*ft_utoa(uint32_t n);
 int			ft_wrong_base(char const *b);
 

@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:22:54 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/30 20:35:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:34:46 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (TRUE);
-	else
-		return (FALSE);
+	return (c >= '0' && c <= '9');
 }

@@ -3,27 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdufour <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:11 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/05 00:32:48 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:55:34 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	int	i;
-	int	j;
+	char	*p;
 
-	i = -1;
-	while (dest[++i])
-		;
-	j = -1;
-	while (src[++j])
-	{
-		dest[i] = src[j];
-		++i;
-	}
-	dest[i] = 0;
+	p = dest;
+	while (*p)
+		++p;
+	while (*src)
+		*p++ = *src++;
+	*p = 0;
 	return (dest);
 }

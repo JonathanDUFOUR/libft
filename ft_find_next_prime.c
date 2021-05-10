@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 12:24:35 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/06 17:18:30 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:28:11 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_find_next_prime(int n)
+uint32_t	ft_find_next_prime(int n)
 {
-	unsigned int	next_prime;
+	uint32_t	next_prime;
 
 	if (n < 2)
 		return (2);

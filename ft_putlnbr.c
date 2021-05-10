@@ -3,28 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putlnbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathan <jojo19.duf@gmail.com>            +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:37:26 by jonathan          #+#    #+#             */
-/*   Updated: 2021/03/06 17:39:41 by jonathan         ###   ########.fr       */
+/*   Updated: 2021/05/10 02:09:41 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
+#include <stdint.h>
 
-void	ft_putlnbr(long n)
+void	ft_putlnbr(int64_t n)
 {
-	unsigned long	abs;
-	char			d;
+	uint64_t	abs;
+	char		d;
 
 	abs = n;
 	if (n < 0)
 	{
 		abs = -n;
-		ft_putchar('-');
+		write(1, "-", 1);
 	}
 	if (abs > 9)
 		ft_putlnbr(abs / 10);
 	d = abs % 10 + '0';
-	ft_putchar(d);
+	write(1, &d, 1);
 }

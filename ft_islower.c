@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 02:03:18 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/30 20:35:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:34:57 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (TRUE);
-	else
-		return (FALSE);
+	return (c >= 'a' && c <= 'z');
 }

@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 02:04:19 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/30 21:19:51 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 01:35:45 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (TRUE);
-	else
-		return (FALSE);
+	return (c >= 'A' && c <= 'Z');
 }
