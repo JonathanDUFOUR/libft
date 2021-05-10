@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_lutoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/10 01:19:22 by jodufour          #+#    #+#             */
-/*   Updated: 2021/05/10 22:03:40 by jodufour         ###   ########.fr       */
+/*   Created: 2021/05/10 22:02:19 by jodufour          #+#    #+#             */
+/*   Updated: 2021/05/10 22:04:08 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include <sys/types.h>
 #include "libft.h"
 
-static uint32_t	get_o_len(uint32_t abs, uint32_t b_len)
+static uint32_t	get_o_len(uint64_t abs, uint32_t b_len)
 {
 	if (abs < b_len)
 		return (1);
 	return (get_o_len(abs / b_len, b_len) + 1);
 }
 
-char	*ft_utoa_base(uint32_t nbr, char const *base)
+char	*ft_lutoa_base(uint64_t nbr, char const *base)
 {
 	char		*output;
 	char		*p;

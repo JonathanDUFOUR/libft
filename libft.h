@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/10 01:42:37 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/10 22:06:59 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstnew(void const *content);
 int			ft_lstsize(t_list *lst);
+char		*ft_lutoa_base(uint64_t nbr, char const *base);
 void		*ft_memalloc(size_t size);
 void		*ft_memccpy(void *dest, void const *src, int c, size_t n);
 void		*ft_memchr(void *s, int c, size_t n);

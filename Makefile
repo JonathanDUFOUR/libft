@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/05/10 01:20:40 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/10 22:02:44 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_lstmap.c				\
 				ft_lstnew.c				\
 				ft_lstsize.c			\
+				ft_lutoa_base.c			\
 				ft_memalloc.c			\
 				ft_memccpy.c			\
 				ft_memchr.c				\
