@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/10 22:06:59 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/14 03:31:18 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char		*ft_cut_spaces(char *s);
 size_t		ft_file_size(char *f);
 uint32_t	ft_find_next_prime(int n);
 ssize_t		ft_indexof(char c, char const *str);
-uint32_t	ft_int_size(int n);
+uint32_t	ft_intlen(int n);
 int			*ft_intsort(int *tab, size_t size);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);

@@ -6,22 +6,22 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:22:40 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:29:44 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/14 03:32:09 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdint.h>
 
-uint32_t	ft_int_size(int nbr)
+uint32_t	ft_intlen(int n)
 {
-	uint32_t	size;
+	uint32_t	len;
 
-	size = 1 + (nbr < 0);
-	nbr /= 10;
-	while (nbr)
+	len = 1 + (n < 0);
+	n /= 10;
+	while (n)
 	{
-		++size;
-		nbr /= 10;
+		++len;
+		n /= 10;
 	}
-	return (size);
+	return (len);
 }

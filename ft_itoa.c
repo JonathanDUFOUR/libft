@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:21 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 18:43:06 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/14 03:31:21 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_itoa(int nbr)
 	char	*output;
 	size_t	len;
 
-	len = ft_int_size(nbr);
+	len = ft_intlen(nbr);
 	output = malloc((len + 1) * sizeof(char));
 	if (!output)
 		return (NULL);
