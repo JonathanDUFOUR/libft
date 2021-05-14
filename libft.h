@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/14 03:31:18 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/14 12:09:05 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,7 @@ void		ft_toggle_byte(uint32_t *ptr, uint32_t idx);
 void		ft_toggle_nbyte(uint32_t *ptr, uint32_t n);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
-size_t		ft_uint_size(uint32_t n);
+uint32_t	ft_uintlen(uint32_t n);
 int			*ft_ultimate_tolower(int *c);
 int			*ft_ultimate_toupper(int *c);
 void		ft_unset_bit(uint32_t *ptr, uint32_t idx);

@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/05/14 03:32:56 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/14 12:09:48 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,7 +126,7 @@ SRCS		=	ft_atoi_base.c			\
 				ft_toggle_nbyte.c		\
 				ft_tolower.c			\
 				ft_toupper.c			\
-				ft_uint_size.c			\
+				ft_uintlen.c			\
 				ft_ultimate_tolower.c	\
 				ft_ultimate_toupper.c	\
 				ft_unset_bit.c			\

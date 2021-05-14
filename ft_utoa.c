@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 05:31:42 by jodufour          #+#    #+#             */
-/*   Updated: 2021/05/09 05:39:47 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/14 12:10:36 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_utoa(uint32_t n)
 	char	*output;
 	size_t	len;
 
-	len = ft_uint_size(n);
+	len = ft_uintlen(n);
 	output = malloc((len + 1) * sizeof(char));
 	if (!output)
 		return (NULL);

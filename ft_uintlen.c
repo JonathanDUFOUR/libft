@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uint_size.c                                     :+:      :+:    :+:   */
+/*   ft_uintlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/09 05:36:06 by jodufour          #+#    #+#             */
-/*   Updated: 2021/05/09 06:09:40 by jodufour         ###   ########.fr       */
+/*   Created: 2021/05/14 12:06:13 by jodufour          #+#    #+#             */
+/*   Updated: 2021/05/14 12:08:03 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdint.h>
-#include <sys/types.h>
 
-size_t	ft_uint_size(uint32_t n)
+uint32_t	ft_uintlen(uint32_t n)
 {
-	size_t	size;
+	uint32_t	len;
 
-	size = 1;
+	len = 1;
 	n /= 10;
 	while (n)
 	{
-		++size;
+		++len;
 		n /= 10;
 	}
-	return (size);
+	return (len);
 }
