@@ -6,18 +6,18 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:21 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/14 03:31:21 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/15 16:13:51 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <sys/types.h>
 #include "libft.h"
 
+/*
 char	*ft_itoa(int nbr)
 {
-	char	*output;
-	size_t	len;
+	char		*output;
+	uint32_t	len;
 
 	len = ft_intlen(nbr);
 	output = malloc((len + 1) * sizeof(char));
@@ -34,4 +34,26 @@ char	*ft_itoa(int nbr)
 		nbr /= 10;
 	}
 	return (output);
+}
+*/
+
+char	*ft_itoa(int n)
+{
+	char		*output;
+	uint32_t	len;
+
+	len = ft_intlen(n);
+	output = malloc((len + 1) * sizeof(char));
+	if (!output)
+		return (NULL);
+	output += len;
+	*output-- = 0;
+	while (n && len--)
+	{
+		*output-- = (n % 10) + '0';
+		n /= 10;
+	}
+	if (len)
+		*output-- = '-';
+	return (++output);
 }
