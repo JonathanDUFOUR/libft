@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/05/14 12:09:48 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/18 06:06:54 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,9 @@ SRCS		=	ft_atoi_base.c			\
 				ft_putlnbr.c			\
 				ft_putlunbr.c			\
 				ft_putnbr_base.c		\
+				ft_putnbr_bin.c			\
+				ft_putnbr_hexa.c		\
+				ft_putnbr_oct.c			\
 				ft_putnbr.c				\
 				ft_putnbr_fd.c			\
 				ft_putstr.c				\

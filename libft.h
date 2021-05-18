@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/14 12:09:05 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/18 06:06:22 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void		*ft_memcpy(void *dest, void const *src, size_t n);
 void		ft_memdel(void **ap);
 void		*ft_memmove(void *dest, void const *src, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
-void		ft_padded_putnbr_base(u_int32_t n, char const *b, u_int8_t l);
+void		ft_padded_putnbr_base(uint32_t n, char const *b, uint8_t l);
 int			ft_power(int n, uint32_t pow);
 void		ft_putbyte(uint8_t byte);
 void		ft_putbytes(void *addr, size_t size);
@@ -85,17 +85,19 @@ void		ft_putendl(char const *s);
 void		ft_putendl_fd(char const *s, int fd);
 void		ft_putlnbr(long n);
 void		ft_putlunbr(unsigned long n);
-void		ft_putnbr_base(u_int32_t n, char const *b);
 void		ft_putnbr(int n);
+void		ft_putnbr_base(uint32_t n, char const *b);
+void		ft_putnbr_bin(uint32_t n);
+void		ft_putnbr_hexa(uint32_t n, int c);
+void		ft_putnbr_oct(uint32_t n);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr(char const *s);
 void		ft_putstr_fd(char const *s, int fd);
-void		ft_putunbr(unsigned int n);
 void		ft_reverse_all_bytes(uint32_t *ptr);
 void		ft_reverse_byte(uint32_t *ptr, uint32_t idx);
 void		ft_reverse_each_byte(uint32_t *ptr);
 void		ft_set_bit(void *ptr, size_t size, size_t idx);
-float		ft_sqrt(u_int32_t n);
+float		ft_sqrt(uint32_t n);
 char		**ft_split(char const *s, char c);
 int			ft_strcasecmp(char const *s1, char const *s2);
 int			ft_strcaseequ(char const *s1, char const *s2);
