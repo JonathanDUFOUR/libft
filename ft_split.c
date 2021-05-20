@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:27:46 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:52:54 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/20 13:32:46 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,14 @@ static size_t	word_len(char const *s, char c)
 	return (p - s);
 }
 
+static void	*free_n_quit(char **output, char **p)
+{
+	while (p >= output)
+		free(*p--);
+	free(output);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char		**output;
@@ -114,6 +122,8 @@ char	**ft_split(char const *s, char c)
 			++s;
 		w_len = word_len(s, c);
 		*p = ft_calloc((w_len + 1), sizeof(char));
+		if (!*p)
+			return (free_n_quit(output, p));
 		ft_strncpy(*p++, s, w_len);
 		s += w_len;
 	}
