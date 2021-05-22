@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/28 23:11:11 by jdufour           #+#    #+#             */
-/*   Updated: 2021/04/06 21:12:03 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/20 13:19:03 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s, char const *set)
 		++s;
 	}
 	if (!*s)
-		return ("");
+		return (ft_calloc(1, sizeof(char)));
 	s += o_len - 1;
 	while (*s && ft_strchr(set, *s))
 	{
