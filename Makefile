@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/05/18 06:06:54 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/25 22:24:49 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,11 @@ SHARED		=	libft.so
 CC			=	gcc -c -o
 LINKER		=	ar rcs
 RM			=	rm -rf
+MAKEDIR		=	mkdir -p
+
+SRCD		=	srcs/
+OBJD		=	objs/
+INCLUDE		=	includes/
 
 SRCS		=	ft_atoi_base.c			\
 				ft_atoi.c				\
@@ -138,9 +143,10 @@ SRCS		=	ft_atoi_base.c			\
 				ft_wrong_base.c
 
 OBJS		:=	${SRCS:.c=.o}
+OBJS		:=	${addprefix ${OBJD}, ${OBJS}}
 DEPS		:=	${OBJS:.o=.d}
 
-CFLAGS		=	-Wall -Wextra -Werror -MMD
+CFLAGS		=	-Wall -Wextra -Werror -MMD -I ${INCLUDE}
 
 LDFLAGS		=
 
@@ -163,17 +169,15 @@ ${SHARED}:	${OBJS}
 
 so:	${SHARED}
 
-%.o:	%.c
+${OBJD}%.o:	${SRCD}%.c
+	@${MAKEDIR} ${OBJD}
 	${CC} $@ ${CFLAGS} $<
 
 clean:
-	@${RM} ${OBJS}
-	@${RM} ${DEPS}
+	${RM} ${OBJD}
 
 fclean:
-	@${RM} ${OBJS}
-	@${RM} ${DEPS}
-	@${RM} ${NAME} ${SHARED}
+	${RM} ${OBJD} ${NAME} ${SHARED}
 
 re: fclean all
 
