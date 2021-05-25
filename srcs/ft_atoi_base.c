@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:21:19 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/20 11:55:58 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 22:27:37 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_atoi_base(char const *s, char const *b)
 	int	sign;
 	int	b_size;
 
+	if (!s)
+		return (0);
 	if (ft_wrong_base(b))
 		return (0);
 	res = 0;

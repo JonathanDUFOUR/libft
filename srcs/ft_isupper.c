@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 02:04:19 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:35:45 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 22:40:06 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+bool	ft_isupper(int c)
 {
 	return (c >= 'A' && c <= 'Z');
 }

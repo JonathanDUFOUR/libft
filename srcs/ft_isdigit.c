@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:22:54 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:34:46 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 22:39:19 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+bool	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/15 11:52:33 by jojo              #+#    #+#              #
-#    Updated: 2021/05/25 22:24:49 by jodufour         ###   ########.fr        #
+#    Updated: 2021/05/25 22:40:36 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,6 @@ SRCS		=	ft_atoi_base.c			\
 				ft_isalnum.c			\
 				ft_isalpha.c			\
 				ft_isascii.c			\
-				ft_ischarset.c			\
 				ft_isdigit.c			\
 				ft_islower.c			\
 				ft_isprime.c			\

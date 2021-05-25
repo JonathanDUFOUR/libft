@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/24 04:07:55 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/30 20:28:05 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 22:39:54 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+bool	ft_isprint(int c)
 {
 	return (c <= '~' && c >= ' ');
 }

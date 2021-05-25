@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/18 06:06:22 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 22:37:25 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdint.h>
 # include <sys/types.h>
 # include <inttypes.h>
+# include <stdbool.h>
 
 # define BUFF_SIZE 8192
 # define TRUE 1
@@ -45,16 +46,15 @@ uint32_t	ft_find_next_prime(int n);
 ssize_t		ft_indexof(char c, char const *str);
 uint32_t	ft_intlen(int n);
 int			*ft_intsort(int *tab, size_t size);
-int			ft_isalnum(int c);
-int			ft_isalpha(int c);
-int			ft_isascii(int c);
-int			ft_ischarset(char c, char const *charset);
-int			ft_isdigit(int c);
-int			ft_islower(int c);
-int			ft_isprime(uint32_t n);
-int			ft_isprint(int c);
-int			ft_isspace(int c);
-int			ft_isupper(int c);
+bool		ft_isalnum(int c);
+bool		ft_isalpha(int c);
+bool		ft_isascii(int c);
+bool		ft_isdigit(int c);
+bool		ft_islower(int c);
+bool		ft_isprime(uint32_t n);
+bool		ft_isprint(int c);
+bool		ft_isspace(int c);
+bool		ft_isupper(int c);
 char		*ft_itoa_base(int n, char const *b);
 char		*ft_itoa(int n);
 void		ft_lstadd_back(t_list **alst, t_list *new);
@@ -83,8 +83,8 @@ void		ft_putchar(char c);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putendl(char const *s);
 void		ft_putendl_fd(char const *s, int fd);
-void		ft_putlnbr(long n);
-void		ft_putlunbr(unsigned long n);
+void		ft_putlnbr(int64_t n);
+void		ft_putlunbr(uint64_t n);
 void		ft_putnbr(int n);
 void		ft_putnbr_base(uint32_t n, char const *b);
 void		ft_putnbr_bin(uint32_t n);
@@ -113,7 +113,7 @@ void		ft_striter(char *s, void (*f)(char *));
 void		ft_striteri(char *s, void (*f)(unsigned, char *));
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_neo_strjoin(char const **strs, char const *link);
-size_t		ft_strlcat(char *dest, char const *src, size_t size);
+size_t		ft_strlcat(char *dst, char const *src, size_t size);
 size_t		ft_strlcpy(char *dst, char const *src, size_t size);
 size_t		ft_strlen(char const *s);
 char		*ft_strmap(char const *s, char (*f)(char));

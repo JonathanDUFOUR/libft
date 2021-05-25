@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:28:43 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/30 20:35:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 22:30:33 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,18 @@
 
 int	ft_wrong_base(char const *base)
 {
-	size_t	i;
-	size_t	j;
+	char const	*p;
 
 	if (!base || ft_strlen(base) < 2)
 		return (TRUE);
-	i = 0;
-	while (base[i])
+	while (*base)
 	{
-		if (base[i] == '-' || base[i] == '+' || ft_isspace(base[i]))
+		if (*base == '-' || *base == '+' || ft_isspace(*base))
 			return (TRUE);
-		j = i;
-		while (base[++j])
-			if (base[i] == base[j])
+		p = base;
+		while (*++p)
+			if (*base == *p)
 				return (TRUE);
-		++i;
 	}
 	return (FALSE);
 }
