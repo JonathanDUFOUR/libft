@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaurens <abaurens@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:14:24 by jdufour           #+#    #+#             */
-/*   Updated: 2020/04/01 15:04:53 by jdufour          ###   ########.fr       */
+/*   Updated: 2021/05/25 22:46:29 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_bzero(void *s, size_t n)
 {
 	register char	*p;
 
+	if (!s)
+		return ;
 	p = s;
 	while (n >= sizeof(uint64_t))
 	{
