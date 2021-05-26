@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/29 03:31:58 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:37:12 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/26 03:04:41 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 	int		size;
 
-	if (!f || !lst)
+	if (!lst || !f)
 		return (NULL);
 	size = ft_lstsize(lst);
-	if (size--)
-	{
-		res = ft_lstnew(f(lst->content));
-		if (!res)
-			return (del_iferror(&res, del));
-		lst = lst->next;
-	}
+	res = NULL;
 	while (size--)
 	{
 		new = ft_lstnew(f(lst->content));

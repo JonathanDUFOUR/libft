@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/22 21:20:35 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/20 13:03:26 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 23:45:19 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (NULL);
 	if (!c)
 		return (((char *)s) + ft_strlen(s));
 	while (*s)

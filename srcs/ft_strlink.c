@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_neo_strjoin.c                                   :+:      :+:    :+:   */
+/*   ft_strlink.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/28 21:39:40 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/23 19:16:45 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/26 00:07:32 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_neo_strjoin(char const **strs, char const *link)
+char	*ft_strlink(char const **strs, char const *link)
 {
 	char		*output;
 	char const	**cpy;
 	size_t		o_len;
 	size_t		l_len;
 
-	if (!strs)
+	if (!strs || !link)
 		return (NULL);
 	if (!*strs || !*(strs + 1))
 		return ((char *)*strs);

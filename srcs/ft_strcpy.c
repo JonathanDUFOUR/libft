@@ -6,17 +6,21 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:45 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:59:17 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/26 00:00:00 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+#include <stdlib.h>
+
+char	*ft_strcpy(char *dst, const char *src)
 {
 	char	*p;
 
-	p = dest;
+	if (!dst || !src)
+		return (NULL);
+	p = dst;
 	while (*src)
 		*p++ = *src++;
 	*p = 0;
-	return (dest);
+	return (dst);
 }

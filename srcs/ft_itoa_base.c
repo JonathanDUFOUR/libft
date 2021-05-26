@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:23:38 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:36:01 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 23:05:19 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 #include <inttypes.h>
 #include "libft.h"
 
-static uint32_t	get_o_len(uint32_t abs, uint32_t b_len, int sign)
+static uint32_t	get_o_len(uint32_t abs, uint32_t b_len, uint32_t sign)
 {
 	if (abs < b_len)
-		return (1);
+		return (sign + 1);
 	return (sign + get_o_len(abs / b_len, b_len, 0) + 1);
 }
 
@@ -38,7 +38,7 @@ char	*ft_itoa_base(int nbr, char const *base)
 	uint32_t	b_len;
 	uint32_t	o_len;
 
-	if (!base || ft_wrong_base(base))
+	if (ft_wrong_base(base))
 		return (NULL);
 	init_abs(&abs, nbr);
 	b_len = ft_strlen(base);

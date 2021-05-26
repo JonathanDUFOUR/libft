@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/25 22:37:25 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/26 02:04:08 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,10 @@ void		ft_cat(char **f);
 char		*ft_convert_base(char const *n, char const *bf, char const *bt);
 char		*ft_ctoa(char const c);
 char		*ft_cut_spaces(char *s);
-size_t		ft_file_size(char *f);
+ssize_t		ft_file_size(char *f);
 uint32_t	ft_find_next_prime(int n);
 ssize_t		ft_indexof(char c, char const *str);
 uint32_t	ft_intlen(int n);
-int			*ft_intsort(int *tab, size_t size);
 bool		ft_isalnum(int c);
 bool		ft_isalpha(int c);
 bool		ft_isascii(int c);
@@ -67,13 +66,12 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstnew(void const *content);
 int			ft_lstsize(t_list *lst);
 char		*ft_lutoa_base(uint64_t nbr, char const *base);
-void		*ft_memalloc(size_t size);
-void		*ft_memccpy(void *dest, void const *src, int c, size_t n);
+void		*ft_memccpy(void *dst, void const *src, int c, size_t n);
 void		*ft_memchr(void *s, int c, size_t n);
 int			ft_memcmp(void const *s1, void const *s2, size_t n);
-void		*ft_memcpy(void *dest, void const *src, size_t n);
+void		*ft_memcpy(void *dst, void const *src, size_t n);
 void		ft_memdel(void **ap);
-void		*ft_memmove(void *dest, void const *src, size_t n);
+void		*ft_memmove(void *dst, void const *src, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
 void		ft_padded_putnbr_base(uint32_t n, char const *b, uint8_t l);
 int			ft_power(int n, uint32_t pow);
@@ -93,39 +91,35 @@ void		ft_putnbr_oct(uint32_t n);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr(char const *s);
 void		ft_putstr_fd(char const *s, int fd);
-void		ft_reverse_all_bytes(uint32_t *ptr);
-void		ft_reverse_byte(uint32_t *ptr, uint32_t idx);
-void		ft_reverse_each_byte(uint32_t *ptr);
-void		ft_set_bit(void *ptr, size_t size, size_t idx);
+void		ft_reverse_all_bytes(uint32_t *addr);
+void		ft_reverse_byte(uint32_t *addr, uint32_t idx);
+void		ft_reverse_each_byte(uint32_t *addr);
 float		ft_sqrt(uint32_t n);
 char		**ft_split(char const *s, char c);
 int			ft_strcasecmp(char const *s1, char const *s2);
-int			ft_strcaseequ(char const *s1, char const *s2);
-char		*ft_strcat(char *dest, char const *src);
+bool		ft_strcaseequ(char const *s1, char const *s2);
+char		*ft_strcat(char *dst, char const *src);
 char		*ft_strchr(char const *s, int c);
-void		ft_strclr(char *s);
 int			ft_strcmp(char const *s1, char const *s2);
-char		*ft_strcpy(char *dest, char const *src);
-void		ft_strdel(char **as);
+char		*ft_strcpy(char *dst, char const *src);
 char		*ft_strdup(char const *s);
-int			ft_strequ(char const *s1, char const *s2);
+bool		ft_strequ(char const *s1, char const *s2);
 void		ft_striter(char *s, void (*f)(char *));
 void		ft_striteri(char *s, void (*f)(unsigned, char *));
 char		*ft_strjoin(char const *s1, char const *s2);
-char		*ft_neo_strjoin(char const **strs, char const *link);
+char		*ft_strlink(char const **strs, char const *link);
 size_t		ft_strlcat(char *dst, char const *src, size_t size);
 size_t		ft_strlcpy(char *dst, char const *src, size_t size);
 size_t		ft_strlen(char const *s);
 char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(uint32_t, char));
 int			ft_strncasecmp(char const *s1, char const *s2, size_t n);
-int			ft_strncaseequ(char const *s1, char const *s2, size_t n);
-char		*ft_strncat(char *dest, char const *src, size_t n);
+bool		ft_strncaseequ(char const *s1, char const *s2, size_t n);
+char		*ft_strncat(char *dst, char const *src, size_t n);
 int			ft_strncmp(char const *s1, char const *s2, size_t n);
-char		*ft_strncpy(char *dest, char const *src, size_t n);
+char		*ft_strncpy(char *dst, char const *src, size_t n);
 char		*ft_strndup(char const *s, size_t n);
-int			ft_strnequ(char const *s1, char const *s2);
-char		*ft_strnew(size_t size);
+bool		ft_strnequ(char const *s1, char const *s2);
 char		*ft_strnstr(char *s, char const *to_find, size_t n);
 char		*ft_strrchr(char const *s, int c);
 char		*ft_strrev(char *s);
@@ -134,19 +128,17 @@ char		*ft_strstr(char const *s, char const *to_find);
 char		*ft_strtrim(char const *s, char const *set);
 char		*ft_substr(char const *s, uint32_t start, size_t len);
 void		ft_swap(int *a, int *b);
-void		ft_swap_bits(uint32_t *ptr, uint32_t idx1, uint32_t idx2);
+void		ft_swap_bits(uint32_t *addr, uint32_t idx1, uint32_t idx2);
 void		ft_swap_strs(char **s1, char **s2);
-void		ft_toggle_bit(uint32_t *ptr, uint32_t idx);
-void		ft_toggle_byte(uint32_t *ptr, uint32_t idx);
-void		ft_toggle_nbyte(uint32_t *ptr, uint32_t n);
+void		ft_toggle_byte(uint32_t *addr, uint32_t idx);
+void		ft_toggle_nbyte(uint32_t *addr, uint32_t n);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 uint32_t	ft_uintlen(uint32_t n);
 int			*ft_ultimate_tolower(int *c);
 int			*ft_ultimate_toupper(int *c);
-void		ft_unset_bit(uint32_t *ptr, uint32_t idx);
 char		*ft_utoa_base(uint32_t nbr, char const *base);
 char		*ft_utoa(uint32_t n);
-int			ft_wrong_base(char const *b);
+bool		ft_wrong_base(char const *b);
 
 #endif

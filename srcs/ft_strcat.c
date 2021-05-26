@@ -6,19 +6,23 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:11 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 01:55:34 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 23:45:02 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, const char *src)
+#include <stdlib.h>
+
+char	*ft_strcat(char *dst, const char *src)
 {
 	char	*p;
 
-	p = dest;
+	if (!dst || !src)
+		return (NULL);
+	p = dst;
 	while (*p)
 		++p;
 	while (*src)
 		*p++ = *src++;
 	*p = 0;
-	return (dest);
+	return (dst);
 }

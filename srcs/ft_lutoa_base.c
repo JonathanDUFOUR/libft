@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 22:02:19 by jodufour          #+#    #+#             */
-/*   Updated: 2021/05/10 22:04:08 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 23:16:35 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_lutoa_base(uint64_t nbr, char const *base)
 	uint32_t	b_len;
 	uint32_t	o_len;
 
-	if (!base || ft_wrong_base(base))
+	if (ft_wrong_base(base))
 		return (NULL);
 	b_len = ft_strlen(base);
 	o_len = get_o_len(nbr, b_len);

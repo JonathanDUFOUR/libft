@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/26 03:09:10 by jdufour           #+#    #+#             */
-/*   Updated: 2021/03/30 09:35:57 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/26 00:05:03 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@ void	ft_striteri(char *s, void (*f)(unsigned, char *))
 {
 	register char const	*p;
 
-	p = s;
-	while (s && *s)
+	if (s && f)
 	{
-		f(s - p, s);
-		++s;
+		p = s;
+		while (s && *s)
+		{
+			f(s - p, s);
+			++s;
+		}
 	}
 }

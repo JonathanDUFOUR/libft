@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/21 06:26:33 by jdufour           #+#    #+#             */
-/*   Updated: 2021/05/10 02:12:51 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/05/25 23:56:22 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_strcmp(char const *s1, char const *s2)
 {
-	while (s1 && s2 && *s1 && *s2 && *s1 == *s2)
+	while (s1 && s2 && *s1 && *(uint8_t *)s1 == *(uint8_t *)s2)
 	{
 		++s1;
 		++s2;
 	}
-	return ((uint8_t)(*s1) - (uint8_t)(*s2));
+	return (*(uint8_t *)s1 - *(uint8_t *)s2);
 }
