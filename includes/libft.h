@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 17:03:53 by jonathan          #+#    #+#             */
-/*   Updated: 2021/05/26 02:04:08 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/06/04 17:51:54 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define LIBFT_H
 
 # include <stdint.h>
-# include <sys/types.h>
+# include <string.h>
+# include <wchar.h>
 # include <inttypes.h>
 # include <stdbool.h>
 
@@ -77,8 +78,8 @@ void		ft_padded_putnbr_base(uint32_t n, char const *b, uint8_t l);
 int			ft_power(int n, uint32_t pow);
 void		ft_putbyte(uint8_t byte);
 void		ft_putbytes(void *addr, size_t size);
-void		ft_putchar(char c);
-void		ft_putchar_fd(char c, int fd);
+void		ft_putchar(wchar_t c);
+void		ft_putchar_fd(wchar_t c, int fd);
 void		ft_putendl(char const *s);
 void		ft_putendl_fd(char const *s, int fd);
 void		ft_putlnbr(int64_t n);
